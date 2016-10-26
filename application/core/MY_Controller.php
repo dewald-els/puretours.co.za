@@ -23,7 +23,7 @@ class MY_Controller extends CI_Controller {
     protected function get_page_content() 
     {
         $url = $this->uri->segment(2);
-        var_dump($url);
+        $url = $url == '' ? 'home' : $url;
         $this->load->model('page_m');
         $page = $this->page_m->get_page_content($url);
         $this->resources->add_data('page', $page);

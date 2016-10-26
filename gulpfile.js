@@ -68,6 +68,7 @@ gulp.task('copy', function () {
     gulp.src('compiled-assets/**/*').pipe(gulp.dest('dist/assets'));
     // Libs - JS
     gulp.src([
+        'assets/bower-components/moment/min/moment.min.js',
         'assets/bower-components/angular/angular.min.js',
         'assets/bower-components/angular-animate/angular-animate.min.js'
     ]).pipe(gulp.dest('dist/assets/libs/'));
@@ -90,7 +91,7 @@ gulp.task('watch', function () {
     gulp.watch('application/core/*', ['recompile']);
     gulp.watch('application/views/**/*', ['recompile']);
     gulp.watch('assets/scss/*.scss', ['recompile']);
-    return gulp.watch('assets/js/*', ['recompile']);
+    return gulp.watch('assets/js/**/*', ['recompile']);
 });
 
 gulp.task('recompile', function () {

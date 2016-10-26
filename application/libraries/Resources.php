@@ -24,6 +24,7 @@ class Resources {
         $this->css[] = 'assets/css/font-awesome.min.css';
         $this->css[] = 'assets/css/global.css';
         // Global JS files
+        $this->js[] = 'assets/libs/moment.min.js';
         $this->js[] = 'assets/libs/angular.min.js';
         $this->js[] = 'assets/libs/angular-animate.min.js';
         $this->js[] = 'assets/js/app.js';

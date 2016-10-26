@@ -16,7 +16,7 @@
     <?php if ($this->resources->header == 1) $this->load->view('modules/header/index'); ?>
 
 
-    <main>
+    <main ng-controller="PageCtrl">
         <?php $this->load->view('public/_page_template'); ?>
     </main>
 
