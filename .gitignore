@@ -1,0 +1,9 @@
+dist/
+compiled-assets/
+node_modules/
+bower_components/
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
