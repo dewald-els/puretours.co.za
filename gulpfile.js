@@ -25,6 +25,11 @@ gulp.task('compile-assets', function () {
             .pipe(babel({presets: 'es2015'}))
             .pipe(gulp.dest('compiled-assets/js'));
 
+        gulp.src('assets/js/controllers/cms-controllers.js')
+            .pipe(imports())
+            .pipe(babel({presets: 'es2015'}))
+            .pipe(gulp.dest('compiled-assets/js'));
+
         return gulp.src('assets/js/controllers/controllers.js')
             .pipe(imports())
             .pipe(babel({presets: 'es2015'}))
@@ -66,6 +71,8 @@ gulp.task('copy', function () {
     gulp.src('system/**/*').pipe(gulp.dest('dist/system'));
     // Assets
     gulp.src('compiled-assets/**/*').pipe(gulp.dest('dist/assets'));
+    // Images
+    gulp.src('assets/img/**/*').pipe(gulp.dest('dist/assets/img'));
     // Libs - JS
     gulp.src([
         'assets/bower-components/moment/min/moment.min.js',

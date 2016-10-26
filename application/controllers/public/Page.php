@@ -1,6 +1,9 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+ * Class Page
+ */
 class Page extends MY_Controller {
 
 	public function index()

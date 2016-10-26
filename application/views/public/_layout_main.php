@@ -11,16 +11,9 @@
 </head>
 <body ng-controller="AppCtrl" ng-cloak>
 
-    <?php $this->load->view('modules/nav/index'); ?>
-
-    <?php if ($this->resources->header == 1) $this->load->view('modules/header/index'); ?>
-
-
     <main ng-controller="PageCtrl">
         <?php $this->load->view('public/_page_template'); ?>
     </main>
-
-    <?php if ($this->resources->footer == 1) $this->load->view('modules/footer/index'); ?>
 
     <?php foreach ($this->resources->js as $js): ?>
         <script type="text/javascript" src="<?php echo base_url($js) ?>"></script>

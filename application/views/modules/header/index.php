@@ -1,5 +1,5 @@
 <footer>
-    <div clas="container">
+    <div class="container">
         <div class="row">
             <div class="col-xs-12">
                 <h4>Header</h4>

@@ -2,6 +2,6 @@ $cms_bg: #222d3d;
 $cms_text_col: #FFF;
 
 html, body {
-  background-color: $cms_bg;
-  color: #FFF;
 }
+
+@import "../../application/views/modules/nav-admin/style";

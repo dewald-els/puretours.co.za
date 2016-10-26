@@ -56,5 +56,9 @@ function cms_route($_route) { return 'cms/'.$_route; };
 $route['default_controller'] = public_route('page');
 $route['page']               = public_route('page');
 $route['page/(:any)']        = public_route('page');
+
+$route['admin']              = cms_route('dashboard');
+$route['admin/dashboard']    = cms_route('dashboard');
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

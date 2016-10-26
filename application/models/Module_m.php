@@ -19,16 +19,18 @@ class Module_m extends MY_Model
     public function get_page_modules($page_id)
     {
         $this->_where(array('page_id'=>$page_id));
+        $this->db->order_by('page_module.order','ASC');
         $this->table_name = 'page_module';
         $this->primary_key = 'page_module_id';
         $page_module_links = $this->get();
+
         $module_ids = [];
         foreach ($page_module_links as $link) {
             $module_ids[] = $link->module_id;
         }
         $this->reset_table_info();
-        $this->db->where_in('module_id', $module_ids);
-        $modules = $this->get();
-        return $modules;
+        $module_ids = implode(',', $module_ids);
+        $modules = $this->db->query('SELECT * FROM module WHERE module.module_id IN ('.$module_ids.') ORDER BY FIELD('.$this->primary_key.','.$module_ids.')');
+        return $modules->result();
     }
 }

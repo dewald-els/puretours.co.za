@@ -7,12 +7,15 @@
  */
 class Resources {
 
+    public $page_title = '';
     public $header = '';
     public $footer = '';
     public $css = array();
     public $js = array();
     public $views = array();
     public $data = array();
+
+    const MODULE_DIR = 'modules/';
 
     public function __construct() {
 
@@ -28,13 +31,14 @@ class Resources {
         $this->js[] = 'assets/libs/angular.min.js';
         $this->js[] = 'assets/libs/angular-animate.min.js';
         $this->js[] = 'assets/js/app.js';
-        $this->js[] = 'assets/js/controllers.js';
+
 
         if ($section == 'PUBLIC') {
-            
+            $this->js[] = 'assets/js/controllers.js';
         }
         else if ($section == 'CMS') {
             $this->add_css('assets/css/cms.css');
+            $this->js[] = 'assets/js/cms-controllers.js';
         }
     }
     
@@ -65,5 +69,11 @@ class Resources {
             'js' => $this->js,
             'views' => $this->views,
         );
+    }
+
+    public function get_module($module)
+    {
+        $CI =& get_instance();
+        $CI->load->view(Resources::MODULE_DIR . $module . "/index");
     }
 }
