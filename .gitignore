@@ -1,7 +1,7 @@
 dist/
 compiled-assets/
 node_modules/
-bower_components/
+bower-components/
 .DS_Store
 .DS_Store?
 ._*
