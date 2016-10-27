@@ -5,9 +5,9 @@
 # http://www.sequelpro.com/
 # https://github.com/sequelpro/sequelpro
 #
-# Host: 127.0.0.1 (MySQL 5.6.28)
+# Host: 127.0.01 (MySQL 5.6.28)
 # Database: puretours
-# Generation Time: 2016-10-27 05:34:55 +0000
+# Generation Time: 2016-10-27 06:46:09 +0000
 # ************************************************************
 
 
@@ -158,15 +158,17 @@ CREATE TABLE `user` (
   `username` varchar(80) DEFAULT NULL,
   `last_login` datetime DEFAULT NULL,
   `date_created` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `active` tinyint(1) DEFAULT '1',
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
 
-INSERT INTO `user` (`user_id`, `first_name`, `last_name`, `email`, `password`, `username`, `last_login`, `date_created`)
+INSERT INTO `user` (`user_id`, `first_name`, `last_name`, `email`, `password`, `username`, `last_login`, `date_created`, `active`)
 VALUES
-	(1,'Dewald','Els','dewald@umodevelopment','password','dewald',NULL,'2016-10-26 22:37:04');
+	(1,'Dewald','Els','dewald@umodevelopment','password','dewald',NULL,'2016-10-26 22:37:04',1),
+	(2,'Admin',NULL,'admin@puretours.co.za','password','admin',NULL,'2016-10-27 08:12:31',1);
 
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;

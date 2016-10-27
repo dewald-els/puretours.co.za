@@ -16,11 +16,11 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="<?php echo site_url('admin/dashboard'); ?>">Dashboard <span class="sr-only">(current)</span></a></li>
-                <li><a href="#">Pages</a></li>
+                <li ng-class="{'active' : App.UI.getActiveNav('dashboard')}"><a href="<?php echo site_url('admin/dashboard'); ?>">Dashboard <span class="sr-only">(current)</span></a></li>
+                <li ng-class="{'active' : App.UI.getActiveNav('pages')}"><a href="<?php echo site_url('admin/pages'); ?>">Pages</a></li>
             </ul>
             <form class="navbar-form navbar-right">
-                <a role="button" class="btn btn-default" href="#"><i class="fa fa-home"></i> Site<span class="sr-only">(current)</span></a>
+                <a role="button" class="btn btn-default" target="_blank" href="<?php echo site_url(); ?>"><i class="fa fa-home"></i> Site<span class="sr-only">(current)</span></a>
                 <button type="submit" class="btn btn-danger">
                     <i class="fa fa-lock"></i>
                     Logout
@@ -28,7 +28,7 @@
             </form>
 
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><i class="fa fa-users"></i> Users</a></li>
+                <li ng-class="{'active' : App.UI.getActiveNav('users')}"><a href="<?php echo site_url('admin/users'); ?>"><i class="fa fa-users"></i> Users</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

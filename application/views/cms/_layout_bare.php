@@ -11,7 +11,6 @@
 </head>
 <body ng-controller="AppCtrl" ng-cloak>
 
-<?php $this->resources->get_module('nav-admin'); ?>
 
 <main>
     <?php foreach ($this->resources->views as $view): ?>
@@ -19,8 +18,6 @@
     <?php endforeach; ?>
 </main>
 
-
-<?php $this->resources->get_module('footer'); ?>
 
 <?php foreach ($this->resources->js as $js): ?>
     <script type="text/javascript" src="<?php echo base_url($js) ?>"></script>

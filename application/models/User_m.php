@@ -20,5 +20,14 @@ class User_m extends MY_Model
     public function __construct()
     {
         parent::__construct();
+        $this->table_name = 'user';
+        $this->primary_key = 'user_id';
+    }
+
+    public function get_all()
+    {
+        $this->_where(array('active'=>1));
+        $users = $this->get();
+        return $users;
     }
 }

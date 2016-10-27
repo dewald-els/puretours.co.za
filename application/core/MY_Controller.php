@@ -38,11 +38,11 @@ class MY_Controller extends CI_Controller
         $this->load->view('public/_layout_main');
     }
 
-    public function layout_cms($page_title = '')
+    public function layout_cms($page_title = '', $layout = 'cms/_layout_main')
     {
         $this->resources->page_title = $page_title;
         $this->resources->load_defaults('CMS');
-        $this->load->view('cms/_layout_main');
+        $this->load->view($layout);
     }
 
     protected function debug($data) {

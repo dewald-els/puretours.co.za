@@ -52,7 +52,6 @@ class Resources {
     }
 
     public function add_js() {
-
     }
 
     public function add_css($css) {
