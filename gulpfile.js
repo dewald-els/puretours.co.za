@@ -6,51 +6,60 @@ var babel = require('gulp-babel');
 var sass = require('gulp-sass');
 var sequence = require('run-sequence');
 
-gulp.task('compile-assets', function () {
 
-    gulp.src('assets/fonts/*')
-        .pipe(gulp.dest('compiled-assets/fonts'));
-
+gulp.task('compile-scss-folder', function () {
     if (ENV == 'dev') {
-
-        gulp.src('assets/scss/*.scss')
+        return gulp.src('assets/scss/*.scss')
             .pipe(sass())
             .pipe(gulp.dest('compiled-assets/css'));
+    }
+    else {
+        return gulp.src('assets/scss/*.scss')
+            .pipe(sass({outputStyle: 'compressed'}))
+            .pipe(gulp.dest('compiled-assets/css'));
+    }
+});
 
-        gulp.src('assets/js/app.js')
+gulp.task('compile-app', function () {
+    if (ENV == 'dev') {
+        return gulp.src('assets/js/app.js')
             .pipe(imports())
             .pipe(babel({presets: 'es2015'}))
             .pipe(gulp.dest('compiled-assets/js'));
+    }
+    else {
+        return gulp.src('assets/js/app.js')
+            .pipe(imports())
+            .pipe(babel({presets: 'es2015'}))
+            .pipe(uglify())
+            .pipe(gulp.dest('compiled-assets/js'));
+    }
+});
 
-        gulp.src('assets/js/controllers/cms-controllers.js')
+gulp.task('compile-cms-controllers', function () {
+    if (ENV == 'dev') {
+        return gulp.src('assets/js/controllers/cms-controllers.js')
             .pipe(imports())
             .pipe(babel({presets: 'es2015'}))
             .pipe(gulp.dest('compiled-assets/js'));
+    }
+    else {
+        return gulp.src('assets/js/controllers/cms-controllers.js')
+            .pipe(imports())
+            .pipe(babel({presets: 'es2015'}))
+            .pipe(uglify())
+            .pipe(gulp.dest('compiled-assets/js'));
+    }
+});
 
+gulp.task('compile-controllers', function () {
+    if (ENV == 'dev') {
         return gulp.src('assets/js/controllers/controllers.js')
             .pipe(imports())
             .pipe(babel({presets: 'es2015'}))
             .pipe(gulp.dest('compiled-assets/js'));
     }
     else {
-        gulp.src('assets/scss/main.scss')
-            .pipe(sass({outputStyle: 'compressed'}))
-            .pipe(gulp.dest('compiled-assets/css'));
-
-        gulp.src('assets/scss/cms.scss')
-            .pipe(sass({outputStyle: 'compressed'}))
-            .pipe(gulp.dest('compiled-assets/css'));
-
-        gulp.src('assets/scss/bootstrap.scss')
-            .pipe(sass({outputStyle: 'compressed'}))
-            .pipe(gulp.dest('compiled-assets/css'));
-
-        gulp.src('assets/js/app.js')
-            .pipe(imports())
-            .pipe(babel({presets: 'es2015'}))
-            .pipe(uglify())
-            .pipe(gulp.dest('compiled-assets/js'));
-
         return gulp.src('assets/js/controllers/controllers.js')
             .pipe(imports())
             .pipe(babel({presets: 'es2015'}))
@@ -59,31 +68,74 @@ gulp.task('compile-assets', function () {
     }
 });
 
-gulp.task('copy', function () {
-    // Base files
-    gulp.src(['.htaccess', 'index.php', 'license.txt']).pipe(gulp.dest('dist'));
-    // Application files
-    gulp.src('application/**/*').pipe(gulp.dest('dist/application'));
-    // System files
-    gulp.src('system/**/*').pipe(gulp.dest('dist/system'));
-    // Assets
-    gulp.src('compiled-assets/**/*').pipe(gulp.dest('dist/assets'));
-    // Images
-    gulp.src('assets/img/**/*').pipe(gulp.dest('dist/assets/img'));
-    // Libs - JS
-    gulp.src([
+gulp.task('copy-system-fonts', function () {
+    return gulp.src('assets/fonts/*')
+        .pipe(gulp.dest('compiled-assets/fonts'));
+});
+
+gulp.task('compile-assets', function () {
+    return sequence(
+        'compile-scss-folder',
+        'copy-system-fonts',
+        'compile-app',
+        'compile-controllers',
+        'compile-cms-controllers'
+    );
+});
+
+gulp.task('copy-base', function () {
+    return gulp.src(['.htaccess', 'index.php', 'license.txt']).pipe(gulp.dest('dist'));
+});
+
+gulp.task('copy-application', function () {
+    return gulp.src('application/**/*').pipe(gulp.dest('dist/application'));
+});
+
+gulp.task('copy-system', function () {
+    return gulp.src('system/**/*').pipe(gulp.dest('dist/system'));
+});
+
+gulp.task('copy-assets', function () {
+    return gulp.src('compiled-assets/**/*').pipe(gulp.dest('dist/assets'));
+});
+
+gulp.task('copy-css', function () {
+    return gulp.src([
+        'assets/bower-components/font-awesome/css/font-awesome.min.css'
+    ]).pipe(gulp.dest('dist/assets/css/'));
+});
+
+gulp.task('copy-libs', function () {
+    return gulp.src([
         'assets/bower-components/moment/min/moment.min.js',
         'assets/bower-components/angular/angular.min.js',
         'assets/bower-components/angular-animate/angular-animate.min.js'
     ]).pipe(gulp.dest('dist/assets/libs/'));
-    // Libs - Font-Awesome
-    gulp.src([
-        'assets/bower-components/font-awesome/css/font-awesome.min.css'
-    ]).pipe(gulp.dest('dist/assets/css/'));
-    // Font awesome fonts
+});
+
+gulp.task('copy-fa-fonts', function () {
     return gulp.src([
         'assets/bower-components/font-awesome/fonts/*'
-    ]).pipe(gulp.dest('dist/assets/fonts'));
+    ]).pipe(gulp.dest('dist/assets/fonts'))
+});
+
+gulp.task('copy-img', function () {
+    return gulp.src([
+        'assets/img/**/*'
+    ]).pipe(gulp.dest('dist/assets/img'));
+});
+
+gulp.task('copy', function () {
+    return sequence(
+        'copy-base',
+        'copy-application',
+        'copy-system',
+        'copy-assets',
+        'copy-css',
+        'copy-libs',
+        'copy-fa-fonts',
+        'copy-img'
+    );
 });
 
 gulp.task('watch', function () {

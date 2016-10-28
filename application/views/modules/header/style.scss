@@ -1,0 +1,38 @@
+#mod-header {
+  position: relative;
+  z-index: 5;
+}
+#mod-header {
+  header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background: transparent;
+  }
+  header .right div,
+  header .right div h4,
+  header .right div a {
+    display: inline-block;
+    vertical-align: middle;
+    color: #FFF;
+  }
+  header .right div a .fa-inverse {
+    color: #333;
+  }
+  header .right .separator {
+    width: 1px;
+    background: #FFF;
+    height: 40px;
+    vertical-align: middle;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  header .right .cta-call {
+    line-height: 1.25;
+    vertical-align: middle;
+    margin: 0;
+  }
+  header .right .cta-call h4 {
+    display: block;
+    margin: 0;
+  }
+}

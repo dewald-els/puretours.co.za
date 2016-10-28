@@ -55,16 +55,26 @@
             </div>
         </div>
 
+        <div class="row" ng-if="EditPage.loadingModules">
+            <div class="col-xs-12 text-center">
+                <div class="spacer-25"></div>
+                <p>
+                    <i class="fa fa-refresh fa-spin fa-3x fa-fw" aria-hidden="true"></i>
+                </p>
+                <p><b>Loading page modules...</b></p>
+            </div>
+        </div>
+
+        <div class="row" ng-if="EditPage.modules.length == 0">
+            <div class="col-xs-12">
+                <p><i class="fa fa-info-circle"></i> <b>There are no modules set up for this page.</b></p>
+            </div>
+        </div>
 
         <div class="row" ng-repeat="module in EditPage.modules">
-
             <div class="col-xs-12">
-
                 <h4>{{module.module_name}}</h4>
-
-
             </div>
-
         </div>
 
     </div>

@@ -1,0 +1,40 @@
+#mod-nav {
+  z-index: 5;
+  position: relative;
+}
+#mod-nav {
+  .navbar {
+    display: block;
+    height: 50px;
+    background: rgba(0,0,0, 0.20);
+  }
+
+  .navbar {
+    .navbar-left {
+      float: left;
+    }
+    .navbar-left,
+    .navbar-right {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar-left li,
+    .navbar-right li {
+      display: inline-block;
+      line-height: 50px;
+      color: #FFF;
+      text-align: center;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .navbar-right {
+      float: right;
+      background: #e2e6eb;
+    }
+    .navbar-right li {
+      width: 52px;
+      color: #333;
+    }
+  }
+}

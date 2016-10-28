@@ -1,9 +1,5 @@
-<div class="banner">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <h4>Banner medium</h4>
-            </div>  
-        </div>
+<div id="mod-banner-med" class="banner">
+    <div class="text-center">
+        <img src="<?php echo base_url('assets/img/backgrounds/modules/banner-home.jpg'); ?>" alt="">
     </div>
 </div>

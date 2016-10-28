@@ -4,7 +4,8 @@
             <div class="row">
                 <div class="col-xs-12 col-md-4">
                     <div class="footer-left">
-                        <img src="<?php echo base_url('assets/img/icons/pt-mail-logo.jpg'); ?>" alt="PureTours email Logo">
+                        <img src="<?php echo base_url('assets/img/icons/pt-mail-logo.jpg'); ?>"
+                             alt="PureTours email Logo">
                         <div class="footer-slogan">
                             <span class="line-1">FIND YOUR</span> <br>
                             <span class="line-2 text-bold">ESCAPE NOW</span>
@@ -48,6 +49,33 @@
                         <li><h4>PURE <span class="text-bold">SPORT</span></h4></li>
                         <li><h4><span class="text-bold">ROBINSON</span> CLUB</h4></li>
                     </ul>
+
+                    <div class="copy">
+                        <a href="#terms">Terms and Conditions</a> |
+                        <a href="#privacy">Privacy Policy</a> | <br>
+                        &copy; Copyright Pure Tours <?php echo date('Y'); ?>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#facebook">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                        <a href="#twitter">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                        <a href="#instagram">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </div>
                 </div>
                 <div class="col-xs-3 text-right">
                     <h4>RESOURCES</h4>

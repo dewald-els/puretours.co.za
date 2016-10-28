@@ -23,6 +23,9 @@ class Module_m extends MY_Model
         $this->table_name = 'page_module';
         $this->primary_key = 'page_module_id';
         $page_module_links = $this->get();
+        if (count($page_module_links) == 0) {
+            return [];
+        }
 
         $module_ids = [];
         foreach ($page_module_links as $link) {

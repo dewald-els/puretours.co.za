@@ -70,12 +70,11 @@ $route['admin/pages']           = cms_route('pages/index');
 $route['admin/login']           = cms_route('login/index');
 $route['admin/users']           = cms_route('users/index');
 $route['admin/users/get_users'] = cms_route('users/get_users');
-$route['admin/users/(:num)'] = cms_route('users/edit_user/$1');
+$route['admin/users/(:num)']    = cms_route('users/edit_user/$1');
 // PAGES
 $route['admin/pages/get_pages'] = cms_route('pages/get_pages');
 $route['admin/pages/get-page-modules'] = cms_route('pages/get_page_modules');
-$route['admin/pages/(:num)'] = cms_route('pages/edit_page/$1');
-
+$route['admin/pages/(:num)']    = cms_route('pages/edit_page/$1');
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

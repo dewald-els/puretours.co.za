@@ -5,11 +5,20 @@ footer.page-footer {
 .footer-heading {
   height: auto;
   background: #000000;
-  padding-top: 30px;
-  padding-bottom: 30px;
 }
 
 .footer-heading {
+  .row {
+    background: black url('../img/backgrounds/footer-gradient.png') top center no-repeat;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  @media (max-width: 991px){
+    .row {
+      background: black;
+
+    }
+  }
   .footer-left {
     width: 100%;
   }
@@ -50,14 +59,59 @@ footer.page-footer {
     border: thin solid #838383;
     background: url("../img/buttons/btn-signup.jpg") top center no-repeat;
   }
+
+  /* Extra Small devices (tablets, 768px and up) */
+  @media (max-width: 480px) {
+    .footer-right form input {
+      width: 100%;
+      margin-bottom: 25px;
+
+    }
+  }
+  /* Small devices (tablets, 768px and up) */
+  @media (min-width: 481px) and (max-width: 767px) {
+    .footer-right form input {
+      width: 245px;
+
+    }
+  }
+
+  @media (min-width: 768px) {
+    .footer-right form input {
+      width: 297px;
+    }
+  }
+
+
+  /* Medium devices (desktops, 992px and up) */
+  @media (min-width: 992px) {
+    .footer-right form input {
+      width: 245px;
+
+    }
+  }
+
+  /* Large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+    .footer-right form input {
+      width: 312px;
+    }
+  }
+
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
   .footer-body {
     padding-bottom: 200px;
   }
 }
 
+.footer-body,
+.footer-body a {
+  color: #FFF;
+  text-decoration: none;
+  line-height: 1.55;
+}
 .footer-body {
   ul {
     margin: 0;
@@ -85,5 +139,14 @@ footer.page-footer {
   .footer-nav li h4 {
     font-weight: 300;
 
+  }
+  .copy  {
+    margin-bottom: 25px;
+  }
+  .fa.fa-circle {
+    color: rgba(204, 204, 204, 0.27);
+  }
+  .fa-inverse {
+    color: #1e2527 !important;
   }
 }
