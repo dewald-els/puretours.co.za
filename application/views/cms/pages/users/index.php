@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h1>Users</h1>
+                <h1 class="text-primary">Users</h1>
             </div>
         </div>
         <div class="row">
@@ -27,7 +27,7 @@
                             <td>{{user.username}}</td>
                             <td>{{user.email}}</td>
                             <td>
-                                <button class="btn btn-sm btn-primary"><i class="fa fa-pencil"></i></button>
+                                <a role="button" href="<?php echo site_url('admin/users/'); ?>{{user.user_id}}" class="btn btn-sm btn-primary"><i class="fa fa-pencil"></i></a>
                                 <button class="btn btn-sm btn-danger"><i class="fa fa-trash-o"></i></button>
                             </td>
                         </tr>

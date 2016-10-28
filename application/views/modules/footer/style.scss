@@ -1,0 +1,89 @@
+footer.page-footer {
+  background: url('../img/backgrounds/footer-large.jpg') bottom center no-repeat;
+}
+
+.footer-heading {
+  height: auto;
+  background: #000000;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.footer-heading {
+  .footer-left {
+    width: 100%;
+  }
+
+  .footer-left img {
+    float: left;
+  }
+
+  .footer-left .footer-slogan {
+    color: #FFF;
+    float: right;
+    text-align: right;
+  }
+
+  .footer-left .footer-slogan .line-1 {
+    font-size: 28px;
+  }
+
+  .footer-left .footer-slogan .line-2 {
+    font-size: 28px;
+  }
+
+  .footer-right {
+    padding-top: 15px;
+  }
+
+  .footer-right form input {
+    height: 47px;
+    color: #333;
+    font-size: 14px;
+    text-align: center;
+    border: none;
+  }
+
+  .footer-right form button {
+    height: 47px;
+    width: 117px;
+    border: thin solid #838383;
+    background: url("../img/buttons/btn-signup.jpg") top center no-repeat;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-body {
+    padding-bottom: 200px;
+  }
+}
+
+.footer-body {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    color: #FFF;
+  }
+  h4 {
+    color: #FFF;
+  }
+  li a {
+    color: #FFF;
+  }
+  .list-nav {
+    line-height: 27px;
+  }
+  .footer-nav {
+    display: inline-block;
+  }
+  .footer-nav li {
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .footer-nav li h4 {
+    font-weight: 300;
+
+  }
+}

@@ -20,7 +20,7 @@
 </main>
 
 
-<?php $this->resources->get_module('footer'); ?>
+<?php $this->resources->get_module('cms-info-bar'); ?>
 
 <?php foreach ($this->resources->js as $js): ?>
     <script type="text/javascript" src="<?php echo base_url($js) ?>"></script>

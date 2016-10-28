@@ -23,7 +23,12 @@ class Resources {
 
     public function load_defaults($section = 'PUBLIC') {
         // Global CSS files
-        $this->css[] = 'assets/css/bootstrap.css';
+        if ($section == 'PUBLIC') {
+            $this->css[] = 'assets/css/bootstrap.css';
+        }
+        else if ($section == 'CMS') {
+            $this->css[] = 'assets/css/cms-bootstrap.css';
+        }
         $this->css[] = 'assets/css/font-awesome.min.css';
         $this->css[] = 'assets/css/global.css';
         // Global JS files

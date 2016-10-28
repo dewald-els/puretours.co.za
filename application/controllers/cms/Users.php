@@ -32,4 +32,18 @@ class Users extends MY_Controller
             'data' => $users
         ));
     }
+
+    public function edit_user()
+    {
+        $user_id = $this->uri->segment(3);
+        if (!$user_id)
+        {
+            redirect('admin/users');
+        }
+        $this->load->model('user_m');
+        $user = $this->user_m->get_user($user_id);
+        $this->resources->add_data('user', $user);
+        $this->resources->add_subview('cms/pages/users/edit-user');
+        $this->layout_cms('Edit Page');
+    }
 }

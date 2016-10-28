@@ -7,16 +7,13 @@ var sass = require('gulp-sass');
 var sequence = require('run-sequence');
 
 gulp.task('compile-assets', function () {
+
+    gulp.src('assets/fonts/*')
+        .pipe(gulp.dest('compiled-assets/fonts'));
+
     if (ENV == 'dev') {
-        gulp.src('assets/scss/global.scss')
-            .pipe(sass())
-            .pipe(gulp.dest('compiled-assets/css'));
 
-        gulp.src('assets/scss/cms.scss')
-            .pipe(sass())
-            .pipe(gulp.dest('compiled-assets/css'));
-
-        gulp.src('assets/scss/bootstrap.scss')
+        gulp.src('assets/scss/*.scss')
             .pipe(sass())
             .pipe(gulp.dest('compiled-assets/css'));
 

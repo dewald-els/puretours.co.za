@@ -27,7 +27,11 @@ class User_m extends MY_Model
     public function get_all()
     {
         $this->_where(array('active'=>1));
-        $users = $this->get();
-        return $users;
+        return $this->get();
+    }
+
+    public function get_user($user_id)
+    {
+        return $this->get($user_id);
     }
 }

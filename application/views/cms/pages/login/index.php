@@ -1,6 +1,8 @@
 <div class="page" ng-controller="UsersCtrl">
 
-    <div class="container">
+    <div class="container login-page">
+
+        <div class="spacer-25"></div>
 
         <div class="row">
             <div class="col-xs-12 text-center">
@@ -9,12 +11,15 @@
                 </div>
             </div>
         </div>
+
+        <div class="spacer-25"></div>
+        <div class="spacer-25"></div>
         
         <div class="row">
             <div class="col-xs-6 col-lg-offset-3">
                 <div class="">
-                    <h1>Login</h1>
                     <div class="login-form">
+                        <h1><i class="fa fa-user"></i> Admin login</h1>
                         <form action="">
                             <div class="form-group">
                                 <label for="">Username</label>
@@ -26,6 +31,7 @@
                             </div>
                             <button class="btn btn-primary">Login</button>
                         </form>
+                        <div class="spacer-25"></div>
                     </div>
                 </div>
             </div>

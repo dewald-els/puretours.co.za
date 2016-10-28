@@ -1,6 +1,21 @@
 $cms_bg: #222d3d;
 $cms_text_col: #FFF;
 
+@font-face {
+  font-family: 'Avenir-Medium';
+  src: url('../fonts/Avenir-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Avenir-Bold';
+  src: url('../fonts/Avenir-Black.ttf') format('truetype');
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Avenir-Bold";
+  font-weight: bold;
+}
+
 html, body {
 }
 
@@ -17,5 +32,10 @@ html, body {
   border-radius: 5px;
   border: thin solid #e5e5e5;
 }
+.login-page {
+  margin-top: 25px;
+
+}
 
 @import "../../application/views/modules/nav-admin/style";
+@import "../../application/views/modules/cms-info-bar/style";

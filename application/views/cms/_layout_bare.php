@@ -11,13 +11,11 @@
 </head>
 <body ng-controller="AppCtrl" ng-cloak>
 
-
 <main>
     <?php foreach ($this->resources->views as $view): ?>
         <?php $this->load->view($view); ?>
     <?php endforeach; ?>
 </main>
-
 
 <?php foreach ($this->resources->js as $js): ?>
     <script type="text/javascript" src="<?php echo base_url($js) ?>"></script>

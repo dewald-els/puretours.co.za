@@ -21,6 +21,12 @@ class Page_m extends MY_Model
         $this->primary_key = 'page_id';
     }
 
+    public function get_page_list()
+    {
+        $this->_where(array('active'=> 1));
+        return $this->get();
+    }
+
     public function get_page_content($url = NULL)
     {
         $this->_where(array('slug'=>'/'.$url));
@@ -29,5 +35,21 @@ class Page_m extends MY_Model
         $modules = $this->module_m->get_page_modules($this->page->id);
         $this->page->set_modules($modules);
         return $this->page;
+    }
+
+    /**
+     * @param $page_id
+     * @return oPage
+     */
+    public function get_page_detail($page_id)
+    {
+        $page = $this->get($page_id);
+        return $page;
+    }
+
+    public function get_page_modules($page_id)
+    {
+        $this->load->model('module_m');
+        return $this->module_m->get_page_modules($page_id);
     }
 }
