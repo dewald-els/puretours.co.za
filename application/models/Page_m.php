@@ -5,6 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Import required classes
  */
 require_once APPPATH.'models/classes/oPage.php';
+require_once APPPATH.'models/classes/oModule.php';
 
 /**
  * Class Page_m
@@ -29,12 +30,22 @@ class Page_m extends MY_Model
 
     public function get_page_content($url = NULL)
     {
-        $this->_where(array('slug'=>'/'.$url));
-        $this->page = new oPage($this->get());
-        $this->load->model('module_m');        
-        $modules = $this->module_m->get_page_modules($this->page->id);
-        $this->page->set_modules($modules);
-        return $this->page;
+        $result = $this->db->query("SELECT
+                        p.page_id,
+                        p.page_title,
+                        m.alias,
+                        m.module_id,
+                        m.module_name,
+                        m.module_path,
+                        pm.module_data
+                        FROM page p
+                        LEFT JOIN page_module pm ON (pm.page_id = p.`page_id`)
+                        INNER JOIN module m ON (pm.`module_id` = m.`module_id`)
+                        WHERE slug = '{$url}' AND m.active = 1
+                        ORDER BY pm.order");
+
+        $page = new oPage($result->result());
+        return $page;
     }
 
     /**

@@ -15,14 +15,18 @@ class oPage
 
     public function __construct($page_info)
     {
-        $page = $page_info[0];
-        $this->id = $page->page_id;
-        $this->title = $page->page_title;
-        $this->modules = NULL;
+        if (count($page_info)) {
+            $this->id = $page_info[0]->page_id;
+            $this->title = $page_info[0]->page_title;
+            $this->set_modules($page_info);
+        }
     }
 
     public function set_modules($modules)
     {
-        $this->modules = $modules;
+        foreach ($modules as $module)
+        {
+            $this->modules[$module->alias] = new oModule($module);
+        }
     }
 }

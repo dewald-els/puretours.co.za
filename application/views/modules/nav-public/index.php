@@ -3,12 +3,12 @@
         <div class="col-xs-12">
             <div class="navbar">
                 <ul class="navbar-left">
-                    <li>HOME</li>
+                    <li><a href="<?php echo site_url('page/home'); ?>">HOME</a></li>
                     <li>PURE <b>SKIING</b></li>
                     <li>PURE <b>SPORT</b></li>
                     <li><b>ROBINSON</b> CLUB</li>
-                    <li>ABOUT</li>
-                    <li>CONTACT</li>
+                    <li><a href="<?php echo site_url('page/about'); ?>">ABOUT</a></li>
+                    <li><a href="<?php echo site_url('page/contact'); ?>">CONTACT</a></li>
                 </ul>
                 <ul class="navbar-right">
                     <li>
