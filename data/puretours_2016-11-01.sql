@@ -5,9 +5,9 @@
 # http://www.sequelpro.com/
 # https://github.com/sequelpro/sequelpro
 #
-# Host: 127.0.0.1 (MySQL 5.6.28)
+# Host: 127.0.01 (MySQL 5.6.28)
 # Database: puretours
-# Generation Time: 2016-11-01 12:37:57 +0000
+# Generation Time: 2016-11-01 15:01:43 +0000
 # ************************************************************
 
 
@@ -98,7 +98,8 @@ VALUES
 	(3,'Banner - Large','2016-10-26 00:12:14',1,'modules/banners/large/index',1,'bannerLarge'),
 	(4,'Header','2016-10-26 00:12:27',3,'modules/header/index',1,'header'),
 	(5,'Footer','2016-10-26 00:12:56',4,'modules/footer/index',1,'footer'),
-	(6,'Nav - Public','2016-10-26 22:50:36',5,'modules/nav-public/index',1,'navPublic');
+	(6,'Nav - Public','2016-10-26 22:50:36',5,'modules/nav-public/index',1,'navPublic'),
+	(7,'Featured Tiles','2016-11-01 15:46:51',6,'modules/tiles/featured/index',1,'featuredTiles');
 
 /*!40000 ALTER TABLE `module` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -124,7 +125,8 @@ VALUES
 	(2,'Sliders'),
 	(3,'Header'),
 	(4,'Footer'),
-	(5,'Navbar');
+	(5,'Navbar'),
+	(6,'Tiles');
 
 /*!40000 ALTER TABLE `module_categories` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -185,7 +187,8 @@ VALUES
 	(5,2,2,'{\"src\": \"assets/img/backgrounds/modules/banner-about.jpg\"}',2),
 	(6,2,6,NULL,1),
 	(7,2,4,NULL,0),
-	(8,2,5,NULL,50);
+	(8,2,5,'',50),
+	(9,1,7,'{\"tiles\":[{\"src\":\"assets/img/tiles/all-inclusive.jpg\"},{\"src\":\"assets/img/tiles/full-board.jpg\"},{\"src\":\"assets/img/tiles/wide-hosted.jpg\"},{\"src\":\"assets/img/tiles/beach.jpg\"},{\"src\":\"assets/img/tiles/ski-chalet.jpg\"},{\"src\":\"assets/img/tiles/sports.jpg\"}]}',3);
 
 /*!40000 ALTER TABLE `page_module` ENABLE KEYS */;
 UNLOCK TABLES;
