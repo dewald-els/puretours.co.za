@@ -1,0 +1,16 @@
+#mod-tiles-featured {
+  position: relative;
+  top: -25px;
+}
+
+#mod-tiles-featured {
+  .tile {
+    background: #CCC;
+    margin-bottom: 25px;
+    border: 1px solid #FFF;
+  }
+  .tile img {
+    width: 100%;
+  }
+
+}
