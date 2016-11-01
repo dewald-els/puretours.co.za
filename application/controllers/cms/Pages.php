@@ -36,7 +36,7 @@ class Pages extends MY_Controller
 
     public function get_page_modules()
     {
-        $post = json_decode(file_get_contents('php://input'));
+        $post = $this->get_post();
         $this->load->model('page_m');
         $modules = $this->page_m->get_page_modules($post->page_id);
         echo json_encode(array(

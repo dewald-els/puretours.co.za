@@ -53,12 +53,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 function public_route($_route) { return 'public/'.$_route; };
 function cms_route($_route) { return 'cms/'.$_route; };
 
-/**---------------------------------------------------
- * PUBLIC ROUTES
-------------------------------------------------------*/
-$route['default_controller'] = public_route('page');
-$route['page']               = public_route('page');
-$route['page/(:any)']        = public_route('page');
+
 
 /**---------------------------------------------------
  * CMS ROUTES
@@ -68,6 +63,7 @@ $route['admin/dashboard']       = cms_route('dashboard');
 $route['admin/pages']           = cms_route('pages/index');
 // USERS
 $route['admin/login']           = cms_route('login/index');
+$route['admin/login-user']      = cms_route('login/login');
 $route['admin/users']           = cms_route('users/index');
 $route['admin/users/get_users'] = cms_route('users/get_users');
 $route['admin/users/(:num)']    = cms_route('users/edit_user/$1');
@@ -75,6 +71,14 @@ $route['admin/users/(:num)']    = cms_route('users/edit_user/$1');
 $route['admin/pages/get_pages'] = cms_route('pages/get_pages');
 $route['admin/pages/get-page-modules'] = cms_route('pages/get_page_modules');
 $route['admin/pages/(:num)']    = cms_route('pages/edit_page/$1');
+
+
+/**---------------------------------------------------
+ * PUBLIC ROUTES
+------------------------------------------------------*/
+$route['default_controller'] = public_route('page');
+$route['page']               = public_route('page');
+$route['(:any)']             = public_route('page');
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

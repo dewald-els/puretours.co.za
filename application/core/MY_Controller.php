@@ -23,7 +23,7 @@ class MY_Controller extends CI_Controller
 
     protected function get_page_content() 
     {
-        $url = $this->uri->segment(2);
+        $url = $this->uri->segment(1);
         $url = $url == NULL ? 'home' : $url;
         $this->load->model('page_m');
         $page = $this->page_m->get_page_content($url);
@@ -43,6 +43,11 @@ class MY_Controller extends CI_Controller
         $this->resources->page_title = $page_title;
         $this->resources->load_defaults('CMS');
         $this->load->view($layout);
+    }
+
+    protected function get_post()
+    {
+        return $_POST;
     }
 
     protected function debug($data) {

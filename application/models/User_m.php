@@ -34,4 +34,11 @@ class User_m extends MY_Model
     {
         return $this->get($user_id);
     }
+
+    public function login_user($username)
+    {
+        $this->_where(array('username'=>$username));
+        $user = $this->get();
+        return $user[0];
+    }
 }

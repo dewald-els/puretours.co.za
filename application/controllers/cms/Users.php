@@ -10,6 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /**
  * Class Users
  * @property User_m $user_m
+ * @property CI_Encryption $encryption
  */
 class Users extends MY_Controller
 {
@@ -45,5 +46,12 @@ class Users extends MY_Controller
         $this->resources->add_data('user', $user);
         $this->resources->add_subview('cms/pages/users/edit-user');
         $this->layout_cms('Edit Page');
+    }
+
+    public function show_decrypted($password)
+    {
+        $this->load->library('encryption');
+        $encrypted_password = $this->encryption->encrypt($password);
+        var_dump($encrypted_password);
     }
 }
