@@ -6,6 +6,8 @@
  * Time: 10:09 AM
  */
 
+date_default_timezone_set('Africa/Johannesburg');
+
 $allowed_domains = array('localhost');
 if (in_array($_SERVER['HTTP_HOST'], $allowed_domains)) {
     $domain = $_SERVER['HTTP_HOST'];
