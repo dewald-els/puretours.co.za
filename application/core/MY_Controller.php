@@ -11,6 +11,7 @@
  * LIBRARIES
  * @property Resources $resources
  * @property Page_m $page_m
+ * @property User_m $user_m
  */
 class MY_Controller extends CI_Controller
 {
@@ -43,6 +44,16 @@ class MY_Controller extends CI_Controller
         $this->resources->page_title = $page_title;
         $this->resources->load_defaults('CMS');
         $this->load->view($layout);
+    }
+
+    protected function verify_login(&$layout)
+    {
+        $this->load->model('user_m');
+        $user = $this->user_m->logged_in();
+        $this->resources->add_data('user', $user);
+        if ($user == false) {
+            //redirect('login');
+        }
     }
 
     protected function get_post()

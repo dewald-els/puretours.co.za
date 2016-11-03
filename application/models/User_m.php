@@ -14,6 +14,7 @@ require_once APPPATH.'models/classes/oUser.php';
 
 /**
  * Class User_m
+ * @property CI_Session $session
  */
 class User_m extends MY_Model
 {
@@ -22,6 +23,12 @@ class User_m extends MY_Model
         parent::__construct();
         $this->table_name = 'user';
         $this->primary_key = 'user_id';
+    }
+
+    public function logged_in()
+    {
+        $this->load->library('session');
+        return $this->session->userdata('user');
     }
 
     public function get_all()
