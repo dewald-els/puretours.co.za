@@ -7,7 +7,7 @@
             <div class="row">
 
                 <div class="col-xs-12 col-md-6">
-                    <span class="fa fa-user"></span>&nbsp;Logged in as:
+                    <span class="fa fa-circle text-success"></span>&nbsp;Logged in as:
                     <?php echo $this->resources->data['user']->username; ?>
                 </div>
 

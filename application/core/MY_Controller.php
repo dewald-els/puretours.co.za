@@ -12,9 +12,12 @@
  * @property Resources $resources
  * @property Page_m $page_m
  * @property User_m $user_m
+ * @property CI_URI $uri
  */
 class MY_Controller extends CI_Controller
 {
+    private $ignore_urls = ['admin/login', 'admin/login-user'];
+
     public function __construct()
     {
         parent::__construct();
@@ -41,18 +44,19 @@ class MY_Controller extends CI_Controller
 
     public function layout_cms($page_title = '', $layout = 'cms/_layout_main')
     {
+        $this->verify_login();
         $this->resources->page_title = $page_title;
         $this->resources->load_defaults('CMS');
         $this->load->view($layout);
     }
 
-    protected function verify_login(&$layout)
+    protected function verify_login()
     {
         $this->load->model('user_m');
         $user = $this->user_m->logged_in();
         $this->resources->add_data('user', $user);
-        if ($user == false) {
-            //redirect('login');
+        if ($user == false && !in_array($this->uri->uri_string(),$this->ignore_urls)) {
+            redirect('admin/login');
         }
     }
 

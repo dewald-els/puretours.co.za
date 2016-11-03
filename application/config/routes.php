@@ -64,6 +64,7 @@ $route['admin/pages']           = cms_route('pages/index');
 // USERS
 $route['admin/login']           = cms_route('login/index');
 $route['admin/login-user']      = cms_route('login/login');
+$route['admin/logout']          = cms_route('login/logout');
 $route['admin/users']           = cms_route('users/index');
 $route['admin/users/get_users'] = cms_route('users/get_users');
 $route['admin/users/(:num)']    = cms_route('users/edit_user/$1');

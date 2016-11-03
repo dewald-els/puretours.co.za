@@ -20,6 +20,7 @@ class Dashboard extends MY_Controller {
 
     public function index()
     {
+        $this->resources->add_subview('cms/pages/dashboard/index');
         $this->layout_cms("Dashboard");
     }
 }

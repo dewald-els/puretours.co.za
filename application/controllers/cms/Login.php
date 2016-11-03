@@ -51,4 +51,12 @@ class Login extends MY_Controller
             $this->layout_cms('Login', 'cms/_layout_bare');
         }
     }
+
+    public function logout()
+    {
+        $this->load->library('session');
+        $this->session->unset_userdata('user');
+        redirect('admin/login','refresh');
+
+    }
 }

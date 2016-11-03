@@ -21,12 +21,11 @@
             </ul>
             <form class="navbar-form navbar-right">
                 <a role="button" class="btn btn-default" target="_blank" href="<?php echo site_url(); ?>"><i class="fa fa-home"></i> Site<span class="sr-only">(current)</span></a>
-                <button type="submit" class="btn btn-danger">
+                <a role="button" href="<?php echo site_url('admin/logout'); ?>" class="btn btn-danger">
                     <i class="fa fa-lock"></i>
                     Logout
-                </button>
+                </a>
             </form>
-
             <ul class="nav navbar-nav navbar-right">
                 <li ng-class="{'active' : App.UI.getActiveNav('users')}"><a href="<?php echo site_url('admin/users'); ?>"><i class="fa fa-users"></i> Users</a></li>
             </ul>
