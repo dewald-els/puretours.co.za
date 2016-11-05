@@ -5,6 +5,10 @@
  * Date: 2016/10/26
  * Time: 10:42 PM
  */
+
+/**
+ * Class oPage
+ */
 class oPage
 {
     public $id;

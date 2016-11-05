@@ -59,7 +59,7 @@
             <div class="col-xs-12 text-center">
                 <div class="spacer-25"></div>
                 <p>
-                    <i class="fa fa-refresh fa-spin fa-3x fa-fw" aria-hidden="true"></i>
+                    <i class="fa fa-cog fa-spin fa-2x fa-fw" aria-hidden="true"></i>
                 </p>
                 <p><b>Loading page modules...</b></p>
             </div>

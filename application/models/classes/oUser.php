@@ -5,6 +5,10 @@
  * Date: 2016/10/26
  * Time: 10:43 PM
  */
+
+/**
+ * Class oUser
+ */
 class oUser
 {
     public $user_id = -1;

@@ -5,6 +5,9 @@
  * Date: 2016/10/30
  * Time: 5:45 PM
  */
+/**
+ * Class oModule
+ */
 class oModule {
     public $id;
     public $name;
