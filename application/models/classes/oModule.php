@@ -14,6 +14,7 @@ class oModule {
     public $alias;
     public $data;
     public $path;
+    public $fields;
 
     public function __construct($module = NULL)
     {
@@ -24,6 +25,9 @@ class oModule {
             $this->data = json_decode($module->module_data);
             $this->name = $module->module_name;
             $this->path = $module->module_path;
+            if (isset($module->module_fields)) {
+                $this->fields = $module->module_fields;
+            }
         }
     }
 }

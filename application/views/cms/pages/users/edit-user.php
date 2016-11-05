@@ -81,8 +81,15 @@
                 </div>
             </div>
 
-            <button class="btn btn-danger">Cancel</button>
-            <button class="btn btn-success">Save</button>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="text-right">
+                        <button class="btn btn-danger">Cancel</button>
+                        <button class="btn btn-success">Save</button>
+                    </div>
+                </div>
+            </div>
+
         </form>
 
     </div>

@@ -47,6 +47,15 @@
                     </div>
                 </div>
             </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="text-right">
+                        <button class="btn btn-danger">Cancel</button>
+                        <button class="btn btn-success">Save</button>
+                    </div>
+                </div>
+            </div>
         </form>
 
         <div class="row">
@@ -71,9 +80,34 @@
             </div>
         </div>
 
-        <div class="row" ng-repeat="module in EditPage.modules">
+        <div class="row" ng-if="EditPage.modules.length">
             <div class="col-xs-12">
-                <h4>{{module.module_name}}</h4>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th width="55">&nbsp;</th>
+                            <th>Module</th>
+                            <th>Active</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="module in EditPage.modules" style="cursor: move;">
+                            <td align="center">
+                                <span class="">
+                                <i class="fa fa-arrows-v"></i>
+                                </span>
+                            </td>
+                            <td>{{module.module_name}}</td>
+                            <td>{{module.active == 1 ? 'Yes' : 'No'}}</td>
+                            <td align="right">
+                                <a role="button" href="<?php echo site_url('admin/page-module/'); ?>{{module.module_id}}/{{EditPage.page_id}}" class="btn btn-sm btn-primary"><i class="fa fa-pencil"></i></a>
+                                <button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
 

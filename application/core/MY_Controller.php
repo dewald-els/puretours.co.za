@@ -60,10 +60,11 @@ class MY_Controller extends CI_Controller
         }
     }
 
-    protected function get_post()
+    protected function get_post($from_input = FALSE)
     {
-        return $_POST;
+        return ($from_input ? json_decode(file_get_contents("php://input")) : $_POST);
     }
+
 
     protected function debug($data) {
         echo '<pre>';

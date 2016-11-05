@@ -22,11 +22,6 @@ APP.controller('EditPageCtrl', ['$scope','$http','$location', function ($scope, 
         }
     };
 
-
-    console.log($scope.EditPage.page_id);
-
-
     $scope.EditPage.getPageModules();
-
 
 }]);
