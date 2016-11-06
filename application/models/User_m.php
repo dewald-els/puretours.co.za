@@ -10,7 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /**
  * Import required classes
  */
-require_once APPPATH.'models/classes/oUser.php';
+require_once APPPATH.'classes/oUser.php';
 
 /**
  * Class User_m

@@ -26,9 +26,11 @@
                     Logout
                 </a>
             </form>
+            <?php if ($this->resources->data['user']->role_id == USER_ROLE_ADMIN): ?>
             <ul class="nav navbar-nav navbar-right">
                 <li ng-class="{'active' : App.UI.getActiveNav('users')}"><a href="<?php echo site_url('admin/users'); ?>"><i class="fa fa-users"></i> Users</a></li>
             </ul>
+            <?php endif; ?>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>

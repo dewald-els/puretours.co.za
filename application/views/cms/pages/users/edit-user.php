@@ -2,7 +2,10 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h1 class="text-primary">Edit user</h1>
+                <h1 class="text-primary">
+                    <?php $this->load->view('modules/buttons/cms-back-button/index'); ?>
+                    Edit user
+                </h1>
             </div>
         </div>
 
@@ -11,14 +14,14 @@
                 <div class="col-xs-12 col-md-6">
                     <div class="form-group">
                         <label for="">First name</label>
-                        <input class="form-control" type="text" placeholder="User first name" value="<?php echo $this->resources->data['user']->first_name; ?>">
+                        <input class="form-control" type="text" placeholder="User first name" value="<?php echo $this->resources->data['editUser']->first_name; ?>">
                     </div>
                 </div>
 
                 <div class="col-xs-12 col-md-6">
                     <div class="form-group">
                         <label for="">Last name</label>
-                        <input class="form-control" type="text" placeholder="User last name" value="<?php echo $this->resources->data['user']->last_name; ?>">
+                        <input class="form-control" type="text" placeholder="User last name" value="<?php echo $this->resources->data['editUser']->last_name; ?>">
                     </div>
                 </div>
             </div>
@@ -27,7 +30,7 @@
                 <div class="col-xs-12">
                     <div class="form-group">
                         <label for="">Email address</label>
-                        <input class="form-control" type="email" placeholder="Users email address" value="<?php echo $this->resources->data['user']->email; ?>">
+                        <input class="form-control" type="email" placeholder="Users email address" value="<?php echo $this->resources->data['editUser']->email; ?>">
                     </div>
                 </div>
             </div>
@@ -37,8 +40,8 @@
                     <div class="form-group">
                         <label for="">User role:</label>
                         <select class="form-control" name="" id="">
-                            <option value="1" <?php echo $this->resources->data['user']->active == 1 ?'selected':''; ?>>Admin</option>
-                            <option value="2" <?php echo $this->resources->data['user']->active == 0 ?'selected':''; ?>>Editor</option>
+                            <option value="1" <?php echo $this->resources->data['editUser']->active == 1 ?'selected':''; ?>>Admin</option>
+                            <option value="2" <?php echo $this->resources->data['editUser']->active == 0 ?'selected':''; ?>>Editor</option>
                         </select>
                     </div>
                 </div>
@@ -66,8 +69,8 @@
                     <div class="form-group">
                         <label for="">Active:</label>
                         <select class="form-control" name="" id="">
-                            <option value="1" <?php echo $this->resources->data['user']->active == 1 ?'selected':''; ?>>Yes</option>
-                            <option value="0" <?php echo $this->resources->data['user']->active == 0 ?'selected':''; ?>>No</option>
+                            <option value="1" <?php echo $this->resources->data['editUser']->active == 1 ?'selected':''; ?>>Yes</option>
+                            <option value="0" <?php echo $this->resources->data['editUser']->active == 0 ?'selected':''; ?>>No</option>
                         </select>
                     </div>
                 </div>
@@ -76,7 +79,7 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="form-group">
-                        <label for="">Date created: <?php echo $this->resources->data['user']->date_created; ?></label>
+                        <label for="">Date created: <?php echo $this->resources->data['editUser']->date_created; ?></label>
                     </div>
                 </div>
             </div>

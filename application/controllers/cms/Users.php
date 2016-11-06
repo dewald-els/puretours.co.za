@@ -43,7 +43,7 @@ class Users extends MY_Controller
         }
         $this->load->model('user_m');
         $user = $this->user_m->get_user($user_id);
-        $this->resources->add_data('user', $user);
+        $this->resources->add_data('editUser', $user);
         $this->resources->add_subview('cms/pages/users/edit-user');
         $this->layout_cms('Edit Page');
     }

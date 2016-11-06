@@ -1,6 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+require_once APPPATH.'classes/oModule.php';
+
+/**
+ * Class Module_m
+ */
 class Module_m extends MY_Model
 {
     private $page = NULL;
@@ -9,6 +14,13 @@ class Module_m extends MY_Model
     {
         parent::__construct();
         $this->reset_table_info();
+    }
+
+    public function get_module($module_id)
+    {
+        $result = $this->get($module_id);
+        $m = new oModule($result);
+        return $m;
     }
 
     private function reset_table_info()

@@ -142,6 +142,7 @@ gulp.task('watch', function () {
     gulp.watch('index.php', ['recompile']);
     gulp.watch('application/config/*', ['recompile']);
     gulp.watch('application/controllers/**/*', ['recompile']);
+    gulp.watch('application/classes/**/*', ['recompile']);
     gulp.watch('application/libraries/**/*', ['recompile']);
     gulp.watch('application/models/**/*', ['recompile']);
     gulp.watch('application/core/*', ['recompile']);

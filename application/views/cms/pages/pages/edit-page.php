@@ -2,7 +2,10 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h1 class="text-primary">Edit page</h1>
+                <h1 class="text-primary">
+                    <?php $this->load->view('modules/buttons/cms-back-button/index'); ?>
+                    Edit page
+                </h1>
             </div>
         </div>
 
@@ -82,7 +85,7 @@
 
         <div class="row" ng-if="EditPage.modules.length">
             <div class="col-xs-12">
-                <table class="table">
+                <table class="table table-striped">
                     <thead>
                         <tr>
                             <th width="55">&nbsp;</th>
@@ -101,7 +104,7 @@
                             <td>{{module.module_name}}</td>
                             <td>{{module.active == 1 ? 'Yes' : 'No'}}</td>
                             <td align="right">
-                                <a role="button" href="<?php echo site_url('admin/page-module/'); ?>{{module.module_id}}/{{EditPage.page_id}}" class="btn btn-sm btn-primary"><i class="fa fa-pencil"></i></a>
+                                <a role="button" href="<?php echo site_url('admin/pages/module/'); ?>{{module.module_id}}/{{EditPage.page_id}}" class="btn btn-sm btn-primary"><i class="fa fa-pencil"></i></a>
                                 <button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
                             </td>
 

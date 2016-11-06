@@ -15,7 +15,7 @@
                         <thead>
                         <tr>
                             <th>Title</th>
-                            <th>Slug</th>
+                            <th>Website URL</th>
                             <th>Date added</th>
                             <th>Active</th>
                             <th>&nbsp;</th>

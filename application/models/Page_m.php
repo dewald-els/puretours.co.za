@@ -4,8 +4,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /**
  * Import required classes
  */
-require_once APPPATH.'models/classes/oPage.php';
-require_once APPPATH.'models/classes/oModule.php';
+require_once APPPATH.'classes/oPage.php';
+require_once APPPATH.'classes/oModule.php';
 
 /**
  * Class Page_m

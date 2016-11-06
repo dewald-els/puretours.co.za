@@ -73,7 +73,7 @@ $route['admin/pages/get_pages'] = cms_route('pages/get_pages');
 $route['admin/pages/get-page-modules'] = cms_route('pages/get_page_modules');
 $route['admin/pages/(:num)']    = cms_route('pages/edit_page/$1');
 // MODULES
-$route['admin/page-module/(:num)/(:num)'] = cms_route('module/index/$1/$2');
+$route['admin/pages/module/(:num)/(:num)'] = cms_route('module/index/$1/$2');
 
 /**---------------------------------------------------
  * PUBLIC ROUTES
