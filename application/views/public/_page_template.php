@@ -2,7 +2,7 @@
 
     <?php foreach ($this->resources->data['page']->modules as $module): ?>
 
-        <?php $this->load->view($module->path); ?>
+        <?php $this->load->view($module->path."/index"); ?>
 
     <?php endforeach; ?>
 

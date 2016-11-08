@@ -7,6 +7,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Time: 12:20 PM
  */
 
+require_once APPPATH.'classes/modules/banners/BannerLarge.php';
+
 /**
  * Class Dashboard
  * @property CI_Session $session
