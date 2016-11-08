@@ -52,10 +52,5 @@ class Module_m extends MY_Model
         return $modules->result();
     }
 
-    public function get_module_options($module_id)
-    {
-        $this->table_name = 'module_options';
-        $this->_where(array('module_id' => $module_id));
-        return $this->get();
-    }
+
 }

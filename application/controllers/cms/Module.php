@@ -24,7 +24,7 @@ class Module extends MY_Controller
         $this->load->model('page_m');
         $this->resources->add_data('page', $this->page_m->get_page_detail($page_id));
         $this->resources->add_data('module', $this->module_m->get_module($module_id));
-        $this->resources->add_data('options', $this->module_m->get_module_options($module_id));
+
         $this->resources->add_subview('cms/pages/module/index');
         $this->layout_cms('Edit module');
     }
