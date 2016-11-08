@@ -5,9 +5,11 @@
                 <h4>Banner image</h4>
                 <form action="">
                     <div class="form-group">
-                        <input type="file" class="form-control hidden" placeholder="Choose your background image" />
-                        <button class="btn btn-primary">Choose file</button>
-                        <div id="selected-file"></div>
+                        <input type="file" class="btn btn-info form-control" placeholder="Choose your background image" />
+                    </div>
+                    <div class="text-right">
+                        <button type="button" class="btn btn-danger">Cancel</button>
+                        <button type="button" class="btn btn-success">Save</button>
                     </div>
                 </form>
             </div>

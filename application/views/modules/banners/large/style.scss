@@ -12,9 +12,13 @@
   min-height: 100px;
   text-align: center;
   padding: 7px;
+  border-radius: 5px;
 }
 .banner-preview span {
   margin: 0 auto;
   font-weight: bold;
   color: #707070;
+}
+input[type=file].btn {
+  height: 38px;
 }
