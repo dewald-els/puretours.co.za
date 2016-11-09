@@ -5,6 +5,11 @@
  * Date: 2016/11/08
  * Time: 8:51 PM
  */
+
+/**
+ * Class Media
+ * @property Filebrowser $filebrowser
+ */
 class Media extends MY_Controller
 {
     public function __construct()
@@ -14,10 +19,18 @@ class Media extends MY_Controller
 
     public function index()
     {
-        $this->load->helper('directory');
-        $this->resources->add_data('folders', directory_map('./assets/img'));
+        $this->resources->add_js('assets/js/jquery-scripts/cms-media-library.js');
         $this->resources->add_subview('cms/pages/media/index');
         $this->layout_cms('Media library');
+    }
+
+    public function get_files()
+    {
+        $this->load->library('filebrowser');
+        // Output the directory listing as JSON
+        header('Content-type: application/json');
+        echo json_encode($this->filebrowser->get_files('./assets/img'));
+
     }
 
 }

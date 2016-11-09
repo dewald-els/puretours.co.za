@@ -107,10 +107,17 @@ gulp.task('copy-css', function () {
 
 gulp.task('copy-libs', function () {
     return gulp.src([
+        'assets/bower-components/jquery/dist/jquery.min.js',
         'assets/bower-components/moment/min/moment.min.js',
         'assets/bower-components/angular/angular.min.js',
         'assets/bower-components/angular-animate/angular-animate.min.js'
     ]).pipe(gulp.dest('dist/assets/libs/'));
+});
+
+gulp.task('copy-jquery-files', function () {
+    return gulp.src([
+        'assets/js/jquery-scripts/**/*'
+    ]).pipe(gulp.dest('compiled-assets/js/jquery-scripts'));
 });
 
 gulp.task('copy-fa-fonts', function () {
@@ -134,7 +141,8 @@ gulp.task('copy', function () {
         'copy-css',
         'copy-libs',
         'copy-fa-fonts',
-        'copy-img'
+        'copy-img',
+        'copy-jquery-files'
     );
 });
 

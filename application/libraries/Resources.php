@@ -12,6 +12,7 @@ class Resources {
     public $footer = '';
     public $css = array();
     public $js = array();
+    private $append_js = array();
     public $views = array();
     public $data = array();
 
@@ -32,6 +33,9 @@ class Resources {
         $this->css[] = 'assets/css/font-awesome.min.css';
         $this->css[] = 'assets/css/global.css';
         // Global JS files
+        if ($section == 'CMS') {
+            $this->js[] = 'assets/libs/jquery.min.js';
+        }
         $this->js[] = 'assets/libs/moment.min.js';
         $this->js[] = 'assets/libs/angular.min.js';
         $this->js[] = 'assets/libs/angular-animate.min.js';
@@ -45,6 +49,7 @@ class Resources {
             $this->add_css('assets/css/cms.css');
             $this->js[] = 'assets/js/cms-controllers.js';
         }
+        $this->js = array_merge($this->js, $this->append_js);
     }
     
     public function add_data($key, $value)
@@ -56,7 +61,8 @@ class Resources {
         $this->header = $header;
     }
 
-    public function add_js() {
+    public function add_js($file) {
+        $this->append_js[] = $file;
     }
 
     public function add_css($css) {
