@@ -16,8 +16,9 @@
             <div class="col-xs-8">
                 <h4>Preview</h4>
                 <div class="banner-preview">
-                    <span>Choose a file to see a preview</span>
-                    <div class="src"></div>
+                    <div class="src">
+                        <img src="<?php echo base_url($this->resources->data['page']->modules['bannerLarge']->data->src); ?>" alt="" class="img-responsive">
+                    </div>
                 </div>
             </div>
         </div>
