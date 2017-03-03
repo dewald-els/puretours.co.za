@@ -1,0 +1,1 @@
+SELECT * FROM module WHERE module.module_id IN ({$module_ids}) ORDER BY FIELD('{$primary_key}',{$module_ids});

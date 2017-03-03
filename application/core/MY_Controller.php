@@ -22,7 +22,6 @@ class MY_Controller extends CI_Controller
     {
         parent::__construct();
         $this->load->library('resources');
-
     }
 
     protected function get_page_content() 
@@ -64,7 +63,6 @@ class MY_Controller extends CI_Controller
     {
         return ($from_input ? json_decode(file_get_contents("php://input")) : $_POST);
     }
-
 
     protected function debug($data) {
         echo '<pre>';

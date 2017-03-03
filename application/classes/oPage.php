@@ -28,10 +28,13 @@ class oPage
         }
     }
 
+    /**
+     * Create a new Module object for each page module.
+     * @param $modules
+     */
     public function set_modules($modules)
     {
-        foreach ($modules as $module)
-        {
+        foreach ($modules as $module) {
             $this->modules[$module->alias] = new oModule($module);
         }
     }

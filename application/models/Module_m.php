@@ -21,6 +21,7 @@ class Module_m extends MY_Model
         $result = $this->get($module_id);
         $m = new oModule($result);
         return $m;
+
     }
 
     private function reset_table_info()
@@ -39,16 +40,18 @@ class Module_m extends MY_Model
         if (count($page_module_links) == 0) {
             return [];
         }
-
         $module_ids = [];
         foreach ($page_module_links as $link) {
             $module_ids[] = $link->module_id;
         }
+
         $this->reset_table_info();
         $module_ids = implode(',', $module_ids);
-
-        $modules = $this->db->query('SELECT * FROM module WHERE module.module_id IN (' . $module_ids . ') ORDER BY FIELD(' . $this->primary_key . ',' . $module_ids . ')');
-
+        $q = $this->get_query_from_file('module', 'get_page_modules.sql');
+        $q = str_replace('{$module_ids}', $module_ids, $q);
+        $q = str_replace('{$primary_key}', $this->primary_key, $q);
+        //$modules = $this->db->query('SELECT * FROM module WHERE module.module_id IN (' . $module_ids . ') ORDER BY FIELD(' . $this->primary_key . ',' . $module_ids . ')');
+        $modules = $this->db->query($q);
         return $modules->result();
     }
 

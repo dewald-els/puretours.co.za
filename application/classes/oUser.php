@@ -23,13 +23,13 @@ class oUser
     public function __construct($user = NULL)
     {
         if (!is_null($user)) {
-            $this->user_id = $user->user_id;
-            $this->first_name = $user->first_name;
-            $this->last_name = $user->last_name;
-            $this->email = $user->email;
-            $this->password = $user->password;
+            $this->user_id      = $user->user_id;
+            $this->first_name   = $user->first_name;
+            $this->last_name    = $user->last_name;
+            $this->email        = $user->email;
+            $this->password     = $user->password;
             $this->date_created = $user->date_created;
-            $this->last_login = $user->last_login;
+            $this->last_login   = $user->last_login;
         }
     }
 }

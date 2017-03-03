@@ -4,8 +4,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /**
  * Import required classes
  */
-require_once APPPATH.'classes/oPage.php';
-require_once APPPATH.'classes/oModule.php';
+require_once APPPATH . 'classes/oPage.php';
+require_once APPPATH . 'classes/oModule.php';
 
 /**
  * Class Page_m
@@ -15,7 +15,7 @@ class Page_m extends MY_Model
 {
     private $page = NULL;
 
-    public function __construct() 
+    public function __construct()
     {
         parent::__construct();
         $this->table_name = 'page';
@@ -24,48 +24,23 @@ class Page_m extends MY_Model
 
     public function get_page_list()
     {
-        $this->_where(array('active'=> 1));
+        $this->_where(array('active' => 1));
         return $this->get();
     }
 
     public function get_page_content_by_id($page_id)
     {
-        $result = $this->db->query("SELECT
-                        p.page_id,
-                        p.page_title,
-                        p.slug,
-                        m.alias,
-                        m.module_id,
-                        m.module_name,
-                        m.module_path,
-                        pm.module_data
-                        FROM page p
-                        LEFT JOIN page_module pm ON (pm.page_id = p.`page_id`)
-                        INNER JOIN module m ON (pm.`module_id` = m.`module_id`)
-                        WHERE `p`.`page_id` = '{$page_id}' AND m.active = 1
-                        ORDER BY pm.order");
-
+        $query = $this->get_query_from_file('page', 'get_page_content_by_id.sql');
+        $result = $this->db->query(str_replace('{$page_id}', $page_id, $query));
         $page = new oPage($result->result());
         return $page;
     }
 
     public function get_page_content($url = NULL)
     {
-        $result = $this->db->query("SELECT
-                        p.page_id,
-                        p.page_title,
-                        p.slug,
-                        m.alias,
-                        m.module_id,
-                        m.module_name,
-                        m.module_path,
-                        pm.module_data
-                        FROM page p
-                        LEFT JOIN page_module pm ON (pm.page_id = p.`page_id`)
-                        INNER JOIN module m ON (pm.`module_id` = m.`module_id`)
-                        WHERE slug = '{$url}' AND m.active = 1
-                        ORDER BY pm.order");
-
+        $query = $this->get_query_from_file('page', 'get_page_content.sql');
+        $query = str_replace('{$url}', $url, $query);
+        $result = $this->db->query($query);
         $page = new oPage($result->result());
         return $page;
     }

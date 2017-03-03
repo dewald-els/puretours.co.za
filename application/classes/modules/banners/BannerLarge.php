@@ -12,7 +12,7 @@ require_once APPPATH.'interfaces/IModule.php';
 /**
  * Class BannerLarge
  */
-class BannerLarge extends oModule  implements IModule
+class BannerLarge extends oModule implements IModule
 {
     protected $src;
 
