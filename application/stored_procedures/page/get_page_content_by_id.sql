@@ -6,9 +6,10 @@ m.alias,
 m.module_id,
 m.module_name,
 m.module_path,
-pm.module_data
+pm.module_data,
+pm.plugins
 FROM page p
 LEFT JOIN page_module pm ON (pm.page_id = p.`page_id`)
 INNER JOIN module m ON (pm.`module_id` = m.`module_id`)
-WHERE `p`.`page_id` = '{$page_id}' AND m.active = 1
+WHERE `p`.`page_id` = '{$page_id}' AND m.active = 1 AND pm.`active` = 1
 ORDER BY pm.order

@@ -16,6 +16,7 @@ class oModule
     public $alias;
     public $data;
     public $path;
+    public $plugins;
 
     public function __construct($module = NULL)
     {
@@ -25,6 +26,7 @@ class oModule
             $this->data = isset($module->module_data) ? json_decode($module->module_data) : NULL;
             $this->name = $module->module_name;
             $this->path = $module->module_path;
+            $this->plugins = isset($module->plugins) ? json_decode($module->plugins) : NULL;
         }
     }
 }

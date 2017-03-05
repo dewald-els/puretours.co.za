@@ -6,6 +6,11 @@
   src: url('../fonts/Avenir-Medium.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'GoodFoot';
+  src: url('../fonts/GoodFoot.ttf') format('truetype');
+}
+
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
 }
@@ -13,6 +18,7 @@
 * {
   box-sizing: border-box;
 }
+
 
 header.header-large {
   height: 740px;
@@ -57,9 +63,19 @@ header.header-large {
 .text-bold {
   font-weight: bold;
 }
-@import "../../application/views/modules/footer/style";
-@import "../../application/views/modules/header/style";
-@import "../../application/views/modules/nav-public/style";
-@import "../../application/views/modules/banners/large/style";
-@import "../../application/views/modules/banners/medium/style";
-@import "../../application/views/modules/tiles/featured/style";
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+html, body {
+  font-family: "Avenir", sans-serif;
+}
+
+@import "modules";

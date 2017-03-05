@@ -50,7 +50,6 @@ class Module_m extends MY_Model
         $q = $this->get_query_from_file('module', 'get_page_modules.sql');
         $q = str_replace('{$module_ids}', $module_ids, $q);
         $q = str_replace('{$primary_key}', $this->primary_key, $q);
-        //$modules = $this->db->query('SELECT * FROM module WHERE module.module_id IN (' . $module_ids . ') ORDER BY FIELD(' . $this->primary_key . ',' . $module_ids . ')');
         $modules = $this->db->query($q);
         return $modules->result();
     }

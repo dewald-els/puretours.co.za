@@ -15,6 +15,8 @@ class oPage
     public $title;
     public $slug;
     public $modules;
+    public $keywords;
+    public $description;
     public $show_header = 1;
     public $show_footer = 1;
 
@@ -23,6 +25,8 @@ class oPage
         if (count($page_info)) {
             $this->id = $page_info[0]->page_id;
             $this->title = $page_info[0]->page_title;
+            $this->keywords = $page_info[0]->keywords;
+            $this->description = $page_info[0]->description;
             $this->slug = $page_info[0]->slug;
             $this->set_modules($page_info);
         }

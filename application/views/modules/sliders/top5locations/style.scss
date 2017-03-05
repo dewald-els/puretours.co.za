@@ -1,0 +1,73 @@
+#top5-locations {
+
+  position: relative;
+
+  h4.slider-title {
+    position: absolute;
+    z-index: 5;
+    font-weight: 300;
+    b {
+      font-weight: 700;
+    }
+  }
+
+  .unslider-nav {
+    top: -30px;
+    position: relative;
+    z-index: 10;
+  }
+
+  .slider {
+
+    .slide {
+      height: 500px;
+      background-size: cover !important;
+      padding-top: 35px;
+
+      .slide-title {
+        font-family: "GoodFoot";
+        font-weight: 300;
+      }
+      a.main-button {
+        text-decoration: none;
+        color: #FFF;
+        display: block;
+        line-height: 48px;
+        width: 200px;
+        text-align: center;
+        background: transparent url('../img/sliders/top5locations/buttons.png') top left no-repeat;
+        background-size: cover;
+        margin-bottom: 20px;
+        &:hover {
+          background-position: bottom left !important;
+        }
+      }
+      .arrows {
+        .arrow {
+          background: transparent url('../img/sliders/top5locations/arrows.png');
+          width: 47px;
+          height: 47px;
+          display: inline-block;
+          border: none;
+          &.left {
+            background-position: top left !important;
+          }
+          &.left:hover {
+            background-position: bottom left !important;
+          }
+          &.right {
+            background-position: top right !important;
+          }
+          &.right:hover {
+            background-position: bottom right !important;
+          }
+          &:active, &:focus {
+            outline: none;
+          }
+        }
+      }
+
+    }
+  }
+
+}

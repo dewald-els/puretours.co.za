@@ -4,9 +4,9 @@
             <div class="navbar">
                 <ul class="navbar-left">
                     <li><a href="<?php echo site_url('home'); ?>">HOME</a></li>
-                    <li>PURE <b>SKIING</b></li>
-                    <li>PURE <b>SPORT</b></li>
-                    <li><b>ROBINSON</b> CLUB</li>
+                    <li><a href="<?php echo site_url('pure-skiing'); ?>">PURE <b>SKIING</b></a></li>
+                    <li><a href="<?php echo site_url('pure-sport'); ?>">PURE <b>SPORT</b></a></li>
+                    <li><a href="<?php echo site_url('robinson-club'); ?>"><b>ROBINSON</b> CLUB</a>  </li>
                     <li><a href="<?php echo site_url('about'); ?>">ABOUT</a></li>
                     <li><a href="<?php echo site_url('contact'); ?>">CONTACT</a></li>
                 </ul>

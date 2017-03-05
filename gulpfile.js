@@ -105,6 +105,11 @@ gulp.task('copy-css', function () {
     ]).pipe(gulp.dest('dist/assets/css/'));
 });
 
+gulp.task('copy-plugins', function () {
+    return gulp.src(['assets/plugins/**/*'])
+        .pipe(gulp.dest('dist/assets/plugins'))
+});
+
 gulp.task('copy-libs', function () {
     return gulp.src([
         'assets/bower-components/jquery/dist/jquery.min.js',
@@ -140,6 +145,7 @@ gulp.task('copy', function () {
         'copy-assets',
         'copy-css',
         'copy-libs',
+        'copy-plugins',
         'copy-fa-fonts',
         'copy-img',
         'copy-jquery-files'
