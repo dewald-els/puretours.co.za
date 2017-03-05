@@ -48,10 +48,10 @@ class Users extends MY_Controller
         $this->layout_cms('Edit Page');
     }
 
-    public function show_decrypted($password)
+    public function show_decrypted()
     {
         $this->load->library('encryption');
-        $encrypted_password = $this->encryption->encrypt($password);
+        $encrypted_password = $this->encryption->decrypt('a83ed14cedd287482224af3cadfe186a9761e79aa4023bbce881a3afac89fb451549f446bcfe00f7698d288ef0f367f221b5d491118996f76821758f0cc32b3eCRzKHouXqWpEhHKLwodjL48gFMemHhb01sknNEbOyHY=');
         var_dump($encrypted_password);
     }
 }
