@@ -19,12 +19,6 @@
   box-sizing: border-box;
 }
 
-
-header.header-large {
-  height: 740px;
-  background-color: #ccc;
-}
-
 .text-center {
   text-align: center;
 }
@@ -72,6 +66,23 @@ header.header-large {
 }
 .text-capitalize {
   text-transform: capitalize;
+}
+
+.pt-btn {
+  background: transparent url('../img/buttons/button-generic.png') top left no-repeat;
+  background-size: cover;
+  width: 200px;
+  height: 48px;
+  line-height: 48px;
+  display: inline-block;
+  text-align: center;
+  color: #FFF;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+    color: #fFF;
+    background-position: bottom left !important;
+  }
 }
 
 html, body {

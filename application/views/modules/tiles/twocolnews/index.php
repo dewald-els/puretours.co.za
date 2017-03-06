@@ -30,6 +30,12 @@
 
                 <div class="bottom">
                     <h2><?php echo $this->resources->data['page']->modules['twoColNews']->data->content->bottom->title; ?></h2>
+
+                    <div id="2colnews-latest-news">
+                        <p>Loading latest news...</p>
+                    </div>
+
+                    <a role="button" class="pt-btn">Read all travel news</a>
                 </div>
 
 

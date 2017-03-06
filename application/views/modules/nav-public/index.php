@@ -1,7 +1,14 @@
 <div id="mod-nav" class="container">
     <div class="row">
         <div class="col-xs-12">
-            <div class="navbar">
+            <div class="navbar" ng-class="{'open':App.UI.Navbar.isOpen}">
+                <div class="controls">
+                    <button ng-click="App.UI.Navbar.toggle()" class="nav-toggle">
+                        <i class="fa fa-bars" ng-hide="App.UI.Navbar.isOpen"></i>
+                        <i class="fa fa-arrow-left" ng-show="App.UI.Navbar.isOpen"></i>
+                    </button>
+                    <img class="navbar-brand" src="<?php echo base_url('assets/img/logos/pt-white-trsp-183x52.png'); ?>" alt="" width="75">
+                </div>
                 <ul class="navbar-left">
                     <li><a href="<?php echo site_url('home'); ?>">HOME</a></li>
                     <li><a href="<?php echo site_url('pure-skiing'); ?>">PURE <b>SKIING</b></a></li>
@@ -15,6 +22,7 @@
                         <i class="fa fa-search"></i>
                     </li>
                 </ul>
+
 
                 <div class="clearfix"></div>
             </div>

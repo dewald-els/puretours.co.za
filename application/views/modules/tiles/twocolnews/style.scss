@@ -11,6 +11,22 @@
       margin-right: 5px;
       margin-bottom: 10px;
     }
+
+  }
+
+  @media screen and (max-width: 480px) {
+    .tiles {
+      margin-top: 0;
+      text-align: center;
+      .tile {
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+        margin-bottom: 25px;
+      }
+    }
   }
 
   .top {

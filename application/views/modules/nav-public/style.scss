@@ -1,16 +1,39 @@
 #mod-nav {
   z-index: 5;
   position: relative;
-}
-#mod-nav {
+
   .navbar {
     display: block;
     height: 50px;
     background: rgba(0,0,0, 0.20);
 
-  }
+    .nav-toggle {
+      display: none;
+      position: relative;
+      left: 15px;
+      top: 10px;
+      background: transparent;
+      border: none;
+      font-size: 18px;
+      color: #FFF;
+      font-weight: 300;
+      &:active, &:focus {
+        outline: none;
+      }
+      .fa-arrow-left {
+        -ms-transform: rotate(-90deg); /* IE 9 */
+        -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+        transform: rotate(-90deg);
+      }
+    }
 
-  .navbar {
+    .navbar-brand {
+      top: 7px;
+      position: relative;
+      left: 15px;
+      display: none;
+    }
+
     .navbar-left {
       float: left;
     }
@@ -46,6 +69,65 @@
     .navbar-right li {
       width: 52px;
       color: #333;
+    }
+  }
+
+
+  @media screen and (max-width: 767px){
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      border-bottom: 1px solid #efefef;
+      background: rgba(0,0,0, 0.80);
+
+      .nav-toggle {
+        display: inline-block;
+      }
+
+      .navbar-brand {
+        display: inline-block;
+      }
+
+
+      .navbar-left {
+        margin-top: 20px;
+      }
+
+      .navbar-left, .navbar-right {
+        background: rgba(0,0,0, 0.80);
+        position: relative;
+        left: -768px;
+        transition: ease-out 250ms;
+        display: block;
+        width: 75%;
+        max-width: 380px;
+        li {
+          display: block;
+          text-align: left;
+        }
+      }
+
+      .navbar-left, .navbar-right {
+        float: none;
+      }
+
+      &.open {
+        .navbar-left, .navbar-right {
+          left: 0;
+          transition: ease-out 250ms;
+        }
+        .nav-toggle .fa-arrow-left {
+          -ms-transform: rotate(0deg); /* IE 9 */
+          -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+          transform: rotate(0deg);
+          transition: ease-out 250ms;
+        }
+      }
+
     }
   }
 }
