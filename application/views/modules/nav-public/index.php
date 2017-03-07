@@ -10,12 +10,12 @@
                     <img class="navbar-brand" src="<?php echo base_url('assets/img/logos/pt-white-trsp-183x52.png'); ?>" alt="" width="75">
                 </div>
                 <ul class="navbar-left">
-                    <li><a href="<?php echo site_url('home'); ?>">HOME</a></li>
-                    <li><a href="<?php echo site_url('pure-skiing'); ?>">PURE <b>SKIING</b></a></li>
-                    <li><a href="<?php echo site_url('pure-sport'); ?>">PURE <b>SPORT</b></a></li>
-                    <li><a href="<?php echo site_url('robinson-club'); ?>"><b>ROBINSON</b> CLUB</a>  </li>
-                    <li><a href="<?php echo site_url('about'); ?>">ABOUT</a></li>
-                    <li><a href="<?php echo site_url('contact'); ?>">CONTACT</a></li>
+                    <li ng-class="{'active':App.UI.Navbar.getActiveNav('home')}"><a href="<?php echo site_url('home'); ?>">HOME</a></li>
+                    <li ng-class="{'active':App.UI.Navbar.getActiveNav('pure-skiing')}"><a href="<?php echo site_url('pure-skiing'); ?>">PURE <b>SKIING</b></a></li>
+                    <li ng-class="{'active':App.UI.Navbar.getActiveNav('pure-sport')}"><a href="<?php echo site_url('pure-sport'); ?>">PURE <b>SPORT</b></a></li>
+                    <li ng-class="{'active':App.UI.Navbar.getActiveNav('robinson-club')}"><a href="<?php echo site_url('robinson-club'); ?>"><b>ROBINSON</b> CLUB</a>  </li>
+                    <li ng-class="{'active':App.UI.Navbar.getActiveNav('about')}"><a href="<?php echo site_url('about'); ?>">ABOUT</a></li>
+                    <li ng-class="{'active':App.UI.Navbar.getActiveNav('contact')}"><a href="<?php echo site_url('contact'); ?>">CONTACT</a></li>
                 </ul>
                 <ul class="navbar-right">
                     <li>

@@ -1,0 +1,28 @@
+#mod-tiles-row-four {
+
+  position: relative;
+  top: -25px;
+
+  .tile {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-bottom: 25px;
+    display: block;
+    img{
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+  }
+
+  @media screen and (max-width: 480px)
+  {
+    .tile {
+      img {
+        width: 80%;
+      }
+    }
+  }
+
+}

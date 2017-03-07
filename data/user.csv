@@ -1,0 +1,4 @@
+user_id,"first_name","last_name","email","password","username","last_login","date_created",role_id,active
+1,"Dewald","Els","dewald@sumodevelopment.co.za","a83ed14cedd287482224af3cadfe186a9761e79aa4023bbce881a3afac89fb451549f446bcfe00f7698d288ef0f367f221b5d491118996f76821758f0cc32b3eCRzKHouXqWpEhHKLwodjL48gFMemHhb01sknNEbOyHY=","dewald",NULL,"2016-10-26 22:37:04",1,1
+2,"Admin",NULL,"admin@puretours.co.za","a83ed14cedd287482224af3cadfe186a9761e79aa4023bbce881a3afac89fb451549f446bcfe00f7698d288ef0f367f221b5d491118996f76821758f0cc32b3eCRzKHouXqWpEhHKLwodjL48gFMemHhb01sknNEbOyHY=","admin",NULL,"2016-10-27 08:12:31",1,1
+3,"John","Editor","editor@puretours.co.za","a83ed14cedd287482224af3cadfe186a9761e79aa4023bbce881a3afac89fb451549f446bcfe00f7698d288ef0f367f221b5d491118996f76821758f0cc32b3eCRzKHouXqWpEhHKLwodjL48gFMemHhb01sknNEbOyHY=","editor",NULL,"2016-10-27 17:48:50",2,1

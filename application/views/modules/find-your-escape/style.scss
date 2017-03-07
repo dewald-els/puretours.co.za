@@ -1,0 +1,69 @@
+#find-your-escape {
+  .find-your-escape {
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 96px;
+    line-height: 96px;
+    background: transparent url('../img/backgrounds/modules/about/find-escape-bg.png') top left no-repeat;
+    background-size: cover;
+    div {
+      display: inline-block;
+    }
+    .left-text {
+      font-size: 32px;
+      vertical-align: middle;
+      text-transform: uppercase;
+      text-align: right;
+      margin-right: 30px;
+      span {
+        display: block;
+        line-height: 1;
+        color: #3d3d3d;
+      }
+    }
+    button {
+      line-height: 48px;
+      height: 48px;
+      border: none;
+      text-transform: uppercase;
+      background-size: cover;
+      &.pt-btn-white {
+        background: #FFF;
+        color: #333;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      &.btn-select-dest {
+        width: 250px;
+      }
+      &.btn-select-dates {
+        width: 220px;
+      }
+    }
+  }
+  @media screen and (max-width: 1199px) {
+    .find-your-escape {
+      .left-text {
+        font-size: 29px;
+        margin-right: 26px;
+      }
+      button {
+        &.btn-select-dest {
+          width: 230px;
+        }
+        &.btn-select-dates {
+          width: 200px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 991px) {
+    .find-your-escape {
+      height: auto;
+      line-height: 96px;
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+  }
+}

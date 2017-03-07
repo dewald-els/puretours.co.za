@@ -4,7 +4,13 @@
   top: -135px;
   min-height: 700px;
   background-position: top center !important;
+
   margin-bottom: -135px;
+}
+@media screen and (min-width: 1921px){
+  #mod-banner-lg {
+    background-size: cover !important;
+  }
 }
 .banner-preview {
   background: #f5f5f5;

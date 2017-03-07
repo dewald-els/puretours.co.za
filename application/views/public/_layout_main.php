@@ -34,7 +34,12 @@
     <?php foreach ($this->resources->data['page']->modules as $module): ?>
         <?php if (isset($module->plugins) && isset($module->plugins->js)): ?>
             <?php foreach ($module->plugins->js as $js): ?>
-                <script type="text/javascript" src="<?php echo base_url($js); ?>"></script>
+                <?php if (strpos($js,'http') !== false): ?>
+                    <script type="text/javascript" async defer src="<?php echo $js; ?>"></script>
+                <?php else: ?>
+                    <script type="text/javascript" src="<?php echo base_url($js); ?>"></script>
+                <?php endif; ?>
+
             <?php endforeach; ?>
         <?php endif; ?>
     <?php endforeach; ?>

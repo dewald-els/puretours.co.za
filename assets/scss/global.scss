@@ -68,8 +68,21 @@
   text-transform: capitalize;
 }
 
+.half {
+  width: 50%;
+}
+
+.form-control {
+  border-radius: 0;
+  background: #f4f4f4;
+  border: thin solid #dbdbdb;
+}
+input[type=text].form-control {
+  height: 48px;
+}
 .pt-btn {
-  background: transparent url('../img/buttons/button-generic.png') top left no-repeat;
+  background: rgba(0,0,0,0.3);
+  border: thin solid rgba(255,255,255,0.5);
   background-size: cover;
   width: 200px;
   height: 48px;
@@ -78,15 +91,31 @@
   text-align: center;
   color: #FFF;
   text-decoration: none;
+  text-transform: uppercase;
   &:hover {
     text-decoration: none;
     color: #fFF;
-    background-position: bottom left !important;
+    background: rgba(0,0,0,0.6);
+  }
+
+  .fa-angle-right {
+    font-weight: bold;
+    float: right;
+    line-height: 45px;
+    margin-right: 10px;
+  }
+
+  &.pt-btn-white {
+    background: #FFF;
+    color: #333;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
 html, body {
   font-family: "Avenir", sans-serif;
+  //font-size: 100%;
 }
 
 @import "modules";

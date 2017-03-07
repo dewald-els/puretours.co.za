@@ -1,0 +1,48 @@
+#robinson {
+
+  .robinson-holidays{
+    position: relative;
+    top: -25px;
+    margin-bottom: 30px;
+  }
+
+  #build-a-package {
+    background: transparent url('../img/backgrounds/modules/robinson/build-a-package.jpg') top center no-repeat;
+    height: 555px;
+    margin-bottom: 30px;
+    .build-text-arrow {
+      margin-top: -15px;
+    }
+  }
+  @media screen and (min-width: 1921px) {
+    #build-a-package {
+      background-size: cover !important;
+    }
+  }
+
+  .about-robinson {
+    margin-bottom: 30px;
+    .col-md-4 {
+      height: 400px;
+      margin-bottom: 30px;
+      h4 {
+        font-size: 27px;
+        text-transform: uppercase;
+        margin: 0;
+        font-weight: 300;
+        b {
+          font-weight: 700;
+        }
+        .date {
+          font-weight: 700;
+        }
+      }
+      .pt-btn {
+        position: absolute;
+        bottom: 0;
+        left: 15px;
+      }
+    }
+  }
+
+}

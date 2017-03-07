@@ -26,7 +26,6 @@
         transform: rotate(-90deg);
       }
     }
-
     .navbar-brand {
       top: 7px;
       position: relative;
@@ -36,6 +35,10 @@
 
     .navbar-left {
       float: left;
+      li.active {
+        background: rgba(0,0,0,0.3);
+        border-bottom: 1px solid #fff;
+      }
     }
     .navbar-left,
     .navbar-right {
@@ -91,7 +94,6 @@
       .navbar-brand {
         display: inline-block;
       }
-
 
       .navbar-left {
         margin-top: 20px;

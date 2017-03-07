@@ -1,0 +1,34 @@
+.mod-package-builder
+{
+  .package-builder {
+    margin-top: -25px;
+    background: #6289ad;
+    padding: 25px;
+    color: #FFF;
+    h4 {
+      font-weight: 300;
+      font-size: 18px;
+    }
+    .text-center.separator {
+      h4{
+        margin: 0;
+        margin-bottom: 10px;
+      }
+    }
+
+    .num-of-people {
+      margin-bottom: 10px;
+      .half:first-child {
+        padding-right: 10px;
+      }
+      .half:last-child {
+        padding-left: 10px;
+      }
+    }
+
+    .pt-btn {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+}
