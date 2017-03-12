@@ -1,0 +1,114 @@
+#package-detail {
+
+  position: relative;
+  margin-top: -105px;
+
+  #package-title-container {
+    height: 80px;
+    line-height: 80px;
+    background: rgba(255, 255, 255, 0.6);
+    overflow: hidden;
+    margin-bottom: 30px;
+
+    h1 {
+      margin: 0;
+      padding: 0;
+      text-transform: uppercase;
+      font-size: 32px;
+      font-weight: 300;
+      b {
+        font-weight: 900;
+      }
+    }
+
+    .package-title-pricing-col {
+      background: #000;
+
+      .package-title-pricing {
+        line-height: 1;
+        width: 90%;
+        margin: 0 auto;
+        background: #000;
+        display: block;
+        color: #FFF;
+        padding: 9px 5px;
+        .from {
+          font-size: 12px;
+          font-weight: 500;
+          text-transform: uppercase;
+          display: block;
+          margin-bottom: 5px;
+        }
+        h2 {
+          margin: 0;
+          font-size: 32px;
+          font-weight: 700;
+        }
+        small {
+          margin-bottom: 5px;
+          font-weight: 300;
+        }
+      }
+    }
+
+  }
+  @media screen and (max-width: 991px) {
+    #package-title-container {
+      height: auto;
+    }
+  }
+
+  .resort-name {
+    text-transform: uppercase;
+  }
+
+  .package-tags {
+    text-align: center;
+
+    .package-tag {
+      display: block;
+      text-align: center;
+      margin-bottom: 25px;
+
+      i.tag {
+        display: block;
+        background: #000;
+        color: #FFF;
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        line-height: 65px;
+        padding: 0;
+        margin: 0 auto 7px auto;
+      }
+
+      &.duration {
+        text-align: center;
+        background: transparent;
+        color: #000;
+        line-height: 1;
+        margin-bottom: 0;
+        .days {
+          font-size: 52px;
+          display: block;
+          font-weight: 900;
+          margin: 0;
+          line-height: 65px;
+          height: 65px;
+          margin-bottom: 7px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .package-tags {
+      margin-top: 25px;
+    }
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+
+}

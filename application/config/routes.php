@@ -85,6 +85,7 @@ $route['admin/media-library/get-files'] = cms_route('media/get_files');
 $route['default_controller'] = public_route('page');
 $route['page']               = public_route('page');
 $route['(:any)']             = public_route('page');
+$route['(:any)/(:any)']      = public_route('page');
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

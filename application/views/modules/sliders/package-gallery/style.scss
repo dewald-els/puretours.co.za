@@ -1,0 +1,92 @@
+.package-gallery {
+
+  position: relative;
+
+  .unslider-nav {
+    top: -30px;
+    position: relative;
+    z-index: 10;
+  }
+
+  .slider {
+    position: relative;
+    .arrows {
+      .arrow {
+        position: absolute;
+        z-index: 10;
+        top: 173px;
+        background: transparent url('../img/sliders/top5locations/arrows.png');
+        width: 47px;
+        height: 47px;
+        display: inline-block;
+        border: none;
+        &.left {
+          background-position: top left !important;
+          left: 0;
+        }
+        &.left:hover {
+          background-position: bottom left !important;
+        }
+        &.right {
+          right: 0;
+          background-position: top right !important;
+        }
+        &.right:hover {
+          background-position: bottom right !important;
+        }
+        &:active, &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    .btn-book-now {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
+
+    .btn-call-you {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 10;
+    }
+
+    @media screen and (max-width: 480px) {
+      .btn-book-now, .btn-call-you {
+        width: 50%;
+      }
+    }
+
+
+    .slide {
+      height: 400px;
+      background-size: cover !important;
+      padding-top: 35px;
+
+      .slide-title {
+        font-family: "GoodFoot";
+        font-weight: 300;
+      }
+      a.main-button {
+        text-decoration: none;
+        color: #FFF;
+        display: block;
+        line-height: 48px;
+        width: 200px;
+        text-align: center;
+        background: transparent url('../img/sliders/top5locations/buttons.png') top left no-repeat;
+        background-size: cover;
+        margin-bottom: 20px;
+        &:hover {
+          background-position: bottom left !important;
+        }
+      }
+
+
+    }
+  }
+
+}

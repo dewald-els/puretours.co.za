@@ -10,6 +10,7 @@
  * Class MY_Controller
  * LIBRARIES
  * @property Resources $resources
+ * @property Responder $responder
  * @property Page_m $page_m
  * @property User_m $user_m
  * @property CI_URI $uri
@@ -22,6 +23,7 @@ class MY_Controller extends CI_Controller
     {
         parent::__construct();
         $this->load->library('resources');
+        $this->load->library('responder');
     }
 
     protected function get_page_content() 

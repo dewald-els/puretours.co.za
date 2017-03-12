@@ -58,6 +58,37 @@
   font-weight: bold;
 }
 
+.col-x-5 {
+  width: 20%;
+  float: left;
+}
+@media screen and (max-width: 767px) {
+  // replace the overwritten values.
+  .col-xs-4 {
+    width: 33.33333333%;
+  }
+}
+
+
+// Remove match height on mobile.
+@media only screen and (max-width : 1199px) {
+  .match-height-lg  {
+    height: auto !important;
+  }
+}
+// Remove match height on mobile.
+@media only screen and (max-width : 991px) {
+  .match-height-md {
+    height: auto !important;
+  }
+}
+// Remove match height on mobile.
+@media only screen and (max-width : 767px) {
+  .match-height-sm {
+    height: auto !important;
+  }
+}
+
 .text-lowercase {
   text-transform: lowercase;
 }
@@ -97,19 +128,22 @@ input[type=text].form-control {
     color: #fFF;
     background: rgba(0,0,0,0.6);
   }
-
   .fa-angle-right {
     font-weight: bold;
     float: right;
     line-height: 45px;
     margin-right: 10px;
+    color: #d5f12e;
   }
-
   &.pt-btn-white {
     background: #FFF;
     color: #333;
     padding-left: 15px;
     padding-right: 15px;
+  }
+  &.pt-btn.blue {
+    background: #5e87be;
+
   }
 }
 

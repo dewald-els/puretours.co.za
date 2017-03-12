@@ -1,0 +1,128 @@
+.package-card-lg {
+
+  border: thin solid #c5c5c5;
+  margin-bottom: 30px;
+
+  .container-fluid {
+    padding: 0;
+    background: #FFF;
+  }
+
+  @media screen and (max-width: 991px) {
+    .container-fluid {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  .package-introduction {
+
+  }
+
+  @media screen and (max-width: 1199px) {
+    .package-introduction {
+      margin-bottom: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  .package-title {
+    padding-left: 25px;
+    text-transform: uppercase;
+  }
+
+  .package-tags {
+
+  }
+
+  @media screen and (max-width: 991px) {
+    .package-tags {
+      padding-left: 25px;
+    }
+  }
+
+  .package-img {
+
+  }
+  @media screen and (max-width: 991px) {
+    .package-img {
+      margin-bottom: 25px;
+    }
+  }
+
+  .package-detail {
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  @media screen and (max-width: 1199px) {
+    .package-detail {
+      margin-bottom: 15px;
+    }
+  }
+  .pricing {
+    position: relative;
+    display: block;
+    height: 100%;
+    line-height: 1;
+    padding-top: 25px;
+    span.from {
+      text-align: right;
+      display: block;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    h2 {
+      margin: 0;
+      font-size: 52px;
+      font-weight: 900;
+      display: inline-block;
+    }
+    small {
+      display: block;
+      font-size: 14px;
+      font-weight: 300;
+      text-align: right;
+    }
+    .pt-btn {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+    }
+    @media screen and (max-width: 1199px) {
+      span.from {
+        text-align: left;
+      }
+      .pt-btn {
+        position: relative;
+        margin-top: 5px;
+      }
+      span {
+        text-align: left;
+      }
+      h2 {
+        font-size: 32px;
+      }
+    }
+    @media screen and (max-width: 991px) {
+      .pt-btn {
+        margin-bottom: 15px;
+      }
+    }
+  }
+  @media screen and (max-width: 1199px) {
+    .pricing {
+      padding-top: 0;
+    }
+  }
+
+}

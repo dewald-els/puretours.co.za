@@ -1,0 +1,142 @@
+.package-filter {
+
+  margin-bottom: 30px;
+
+  .filter-heading {
+    h2 {
+      color: #FFF;
+      font-size: 32px;
+      margin: 0;
+      text-transform: uppercase;
+      display: inline-block;
+      font-weight: 300;
+      b {
+        font-weight: 900;
+      }
+    }
+    .pt-btn.blue {
+      float: right;
+    }
+  }
+
+  .filter-controls {
+    background: rgba(255,255,255,0.6);
+    padding: 15px;
+
+    .pt-btn.pt-btn-white {
+      width: auto;
+      font-weight: bold;
+
+      &.btn-country {
+        width: 175px;
+      }
+      &.btn-resort {
+        width: 135px;
+      }
+      &.btn-price {
+        width: 125px;
+      }
+      &.btn-dates {
+        width: 116px;
+      }
+      &.btn-ski {
+        width: 135px;
+      }
+      &.btn-all-inclusive {
+        width: 200px;
+      }
+
+    }
+
+    @media screen and (max-width: 1199px) {
+      .pt-btn.pt-btn-white {
+        &.btn-country {
+          width: 125px;
+        }
+        &.btn-resort {
+          width: 115px;
+        }
+        &.btn-price {
+          width: 100px;
+        }
+        &.btn-dates {
+          width: 100px;
+        }
+        &.btn-ski {
+          width: 121px;
+        }
+        &.btn-all-inclusive {
+          width: 175px;
+        }
+      }
+      .pt-btn.btn-filter-results {
+        width: 150px;
+      }
+    }
+
+    @media screen and (max-width: 991px) {
+      .pt-btn.pt-btn-white {
+        &.btn-country {
+          width: 150px;
+          margin-bottom: 5px;
+        }
+        &.btn-resort {
+          width: 150px;
+        }
+        &.btn-price {
+          width: 125px;
+        }
+        &.btn-dates {
+          width: 125px;
+        }
+        &.btn-ski {
+          width: 121px;
+        }
+        &.btn-all-inclusive {
+          width: 175px;
+        }
+      }
+      .pt-btn.btn-filter-results {
+        width: 150px;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .pt-btn.pt-btn-white {
+        margin-bottom: 5px;
+        display: inline-block;
+        float: left;
+        border: thin solid #eee;
+        &.btn-country {
+          width: 100%;
+        }
+        &.btn-resort {
+          width: 100%;
+        }
+        &.btn-price {
+          width: 100%;
+        }
+        &.btn-dates {
+          width: 100%;
+        }
+        &.btn-ski {
+          width: 100%;
+        }
+        &.btn-all-inclusive {
+          width: 100%;
+        }
+      }
+      .pt-btn.btn-filter-results {
+        width: 100%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .filter-controls {
+      box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    }
+  }
+
+}
+

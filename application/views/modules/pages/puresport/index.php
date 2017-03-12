@@ -7,16 +7,24 @@
             <div class="row">
 
                 <div class="col-xs-12 col-md-3 text-center">
-                    <img src="<?php echo base_url('assets/img/backgrounds/modules/puresport/sport-holidays/1.jpg'); ?>" alt="">
+                    <div class="tile">
+                        <img src="<?php echo base_url('assets/img/backgrounds/modules/puresport/sport-holidays/1.jpg'); ?>" alt="">
+                    </div>
                 </div>
                 <div class="col-xs-12 col-md-3 text-center">
-                    <img src="<?php echo base_url('assets/img/backgrounds/modules/puresport/sport-holidays/2.jpg'); ?>" alt="">
+                    <div class="tile">
+                        <img src="<?php echo base_url('assets/img/backgrounds/modules/puresport/sport-holidays/2.jpg'); ?>" alt="">
+                    </div>
                 </div>
                 <div class="col-xs-12 col-md-3 text-center">
-                    <img src="<?php echo base_url('assets/img/backgrounds/modules/puresport/sport-holidays/3.jpg'); ?>" alt="">
+                    <div class="tile">
+                        <img src="<?php echo base_url('assets/img/backgrounds/modules/puresport/sport-holidays/3.jpg'); ?>" alt="">
+                    </div>
                 </div>
                 <div class="col-xs-12 col-md-3 text-center">
-                    <img src="<?php echo base_url('assets/img/backgrounds/modules/puresport/sport-holidays/4.jpg'); ?>" alt="">
+                    <div class="tile">
+                        <img src="<?php echo base_url('assets/img/backgrounds/modules/puresport/sport-holidays/4.jpg'); ?>" alt="">
+                    </div>
                 </div>
 
             </div>
@@ -28,7 +36,7 @@
     <div id="build-a-package">
         <div class="container">
             <div class="row">
-                <div class="col-xs-8">
+                <div class="col-xs-12 col-md-8">
 
                     <div class="text-right">
                         <img class="build-text-arrow" src="<?php echo base_url('assets/img/backgrounds/modules/contact/build-text-arrow.png'); ?>"
@@ -37,7 +45,7 @@
 
                 </div>
 
-                <div class="col-xs-4">
+                <div class="col-xs-12 col-md-4">
 
                     <?php $this->load->view('modules/package-builder/index'); ?>
 

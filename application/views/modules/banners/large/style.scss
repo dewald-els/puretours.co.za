@@ -28,3 +28,12 @@
 input[type=file].btn {
   height: 38px;
 }
+
+@media screen and (max-width: 767px) {
+  #mod-banner-lg {
+    margin-top: -52px;
+    min-height: 550px;
+    background-position: top center !important;
+    background-size: cover !important;
+  }
+}

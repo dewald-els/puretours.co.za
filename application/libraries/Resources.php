@@ -37,6 +37,7 @@ class Resources {
         $this->js[] = 'assets/libs/angular.min.js';
         $this->js[] = 'assets/libs/angular-animate.min.js';
         $this->js[] = 'assets/js/app.js';
+        $this->js[] = 'assets/js/services.js';
 
         if ($section == 'PUBLIC') {
             $this->js[] = 'assets/js/controllers.js';

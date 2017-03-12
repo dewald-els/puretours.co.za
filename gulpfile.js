@@ -68,6 +68,22 @@ gulp.task('compile-controllers', function () {
     }
 });
 
+gulp.task('compile-services', function () {
+    if (ENV == 'dev') {
+        return gulp.src('assets/js/services/services.js')
+            .pipe(imports())
+            .pipe(babel({presets: 'es2015'}))
+            .pipe(gulp.dest('compiled-assets/js'));
+    }
+    else {
+        return gulp.src('assets/js/services/services.js')
+            .pipe(imports())
+            .pipe(babel({presets: 'es2015'}))
+            .pipe(uglify())
+            .pipe(gulp.dest('compiled-assets/js'));
+    }
+});
+
 gulp.task('copy-system-fonts', function () {
     return gulp.src('assets/fonts/*')
         .pipe(gulp.dest('compiled-assets/fonts'));
@@ -79,7 +95,8 @@ gulp.task('compile-assets', function () {
         'copy-system-fonts',
         'compile-app',
         'compile-controllers',
-        'compile-cms-controllers'
+        'compile-cms-controllers',
+        'compile-services'
     );
 });
 
