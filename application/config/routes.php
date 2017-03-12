@@ -74,9 +74,8 @@ $route['admin/pages/get-page-modules'] = cms_route('pages/get_page_modules');
 $route['admin/pages/(:num)']    = cms_route('pages/edit_page/$1');
 // MODULES
 $route['admin/pages/module/(:num)/(:num)'] = cms_route('module/index/$1/$2');
-// MEDIA LIBRARY
-$route['admin/media-library'] = cms_route('media/index');
-$route['admin/media-library/get-files'] = cms_route('media/get_files');
+// Packages
+$route['admin/packages'] = cms_route('packages/index');
 
 
 /**---------------------------------------------------

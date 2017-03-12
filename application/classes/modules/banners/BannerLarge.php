@@ -6,28 +6,34 @@
  * Time: 1:41 PM
  */
 
-require_once APPPATH.'classes/oModule.php';
-require_once APPPATH.'interfaces/IModule.php';
+namespace PT_Classes {
 
-/**
- * Class BannerLarge
- */
-class BannerLarge extends oModule implements IModule
-{
-    protected $src;
+    require_once APPPATH . 'classes/oModule.php';
+    require_once APPPATH . 'interfaces/IModule.php';
 
-    public function __construct()
+    use PT_Interfaces;
+
+    /**
+     * Class BannerLarge
+     * @package PT_Classes
+     */
+    class BannerLarge extends oModule implements PT_Interfaces\IModule
     {
-        parent::__construct();
-    }
+        protected $src;
 
-    public function get_data_structure()
-    {
-        return json_encode(get_object_vars($this));
-    }
+        public function __construct()
+        {
+            parent::__construct();
+        }
 
-    public function set_data($data)
-    {
-        $this->src = $data['src'];
+        public function get_data_structure()
+        {
+            return json_encode(get_object_vars($this));
+        }
+
+        public function set_data($data)
+        {
+            $this->src = $data['src'];
+        }
     }
 }

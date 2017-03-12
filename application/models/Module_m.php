@@ -3,6 +3,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 require_once APPPATH.'classes/oModule.php';
 
+use PT_Classes;
+
 /**
  * Class Module_m
  */
@@ -19,7 +21,7 @@ class Module_m extends MY_Model
     public function get_module($module_id)
     {
         $result = $this->get($module_id);
-        $m = new oModule($result);
+        $m = new PT_Classes\oModule($result);
         return $m;
 
     }

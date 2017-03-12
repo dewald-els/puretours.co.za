@@ -84,6 +84,22 @@ gulp.task('compile-services', function () {
     }
 });
 
+gulp.task('compile-jquery', function () {
+    if (ENV == 'dev') {
+        return gulp.src('assets/js/jquery-scripts/cms.jquery.js')
+            .pipe(imports())
+            .pipe(babel({presets: 'es2015'}))
+            .pipe(gulp.dest('compiled-assets/js'));
+    }
+    else {
+        return gulp.src('assets/js/jquery-scripts/cms.jquery.js')
+            .pipe(imports())
+            .pipe(babel({presets: 'es2015'}))
+            .pipe(uglify())
+            .pipe(gulp.dest('compiled-assets/js'));
+    }
+});
+
 gulp.task('copy-system-fonts', function () {
     return gulp.src('assets/fonts/*')
         .pipe(gulp.dest('compiled-assets/fonts'));
@@ -96,7 +112,8 @@ gulp.task('compile-assets', function () {
         'compile-app',
         'compile-controllers',
         'compile-cms-controllers',
-        'compile-services'
+        'compile-services',
+        'compile-jquery'
     );
 });
 
@@ -130,16 +147,11 @@ gulp.task('copy-plugins', function () {
 gulp.task('copy-libs', function () {
     return gulp.src([
         'assets/bower-components/jquery/dist/jquery.min.js',
+        'assets/bower-components/bootstrap/dist/js/bootstrap.min.js',
         'assets/bower-components/moment/min/moment.min.js',
         'assets/bower-components/angular/angular.min.js',
         'assets/bower-components/angular-animate/angular-animate.min.js'
     ]).pipe(gulp.dest('dist/assets/libs/'));
-});
-
-gulp.task('copy-jquery-files', function () {
-    return gulp.src([
-        'assets/js/jquery-scripts/**/*'
-    ]).pipe(gulp.dest('compiled-assets/js/jquery-scripts'));
 });
 
 gulp.task('copy-fa-fonts', function () {
@@ -164,8 +176,7 @@ gulp.task('copy', function () {
         'copy-libs',
         'copy-plugins',
         'copy-fa-fonts',
-        'copy-img',
-        'copy-jquery-files'
+        'copy-img'
     );
 });
 

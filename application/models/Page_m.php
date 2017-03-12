@@ -32,7 +32,7 @@ class Page_m extends MY_Model
     {
         $query = $this->get_query_from_file('page', 'get_page_content_by_id.sql');
         $result = $this->db->query(str_replace('{$page_id}', $page_id, $query));
-        $page = new oPage($result->result());
+        $page = new PT_Classes\oPage($result->result());
         return $page;
     }
 
@@ -41,7 +41,7 @@ class Page_m extends MY_Model
         $query = $this->get_query_from_file('page', 'get_page_content.sql');
         $query = str_replace('{$url}', $url, $query);
         $result = $this->db->query($query);
-        $page = new oPage($result->result());
+        $page = new PT_Classes\oPage($result->result());
         return $page;
     }
 

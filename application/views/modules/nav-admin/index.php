@@ -16,19 +16,19 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li ng-class="{'active' : App.UI.getActiveNav('dashboard')}">
+                <li ng-class="{'active' : App.UI.Navbar.getActiveNav('dashboard')}">
                     <a href="<?php echo site_url('admin/dashboard'); ?>">
                        <i class="fa fa-fw fa-dashboard"></i> Dashboard <span class="sr-only">(current)</span>
                     </a>
                 </li>
-                <li ng-class="{'active' : App.UI.getActiveNav('pages')}">
+                <li ng-class="{'active' : App.UI.Navbar.getActiveNav('pages')}">
                     <a href="<?php echo site_url('admin/pages'); ?>">
                         <i class="fa fa-fw fa-file-text"></i> Pages
                     </a>
                 </li>
-                <li ng-class="{'active' : App.UI.getActiveNav('media-library')}">
-                    <a href="<?php echo site_url('admin/media-library'); ?>">
-                        <i class="fa fa-fw fa-image"></i> Media library
+                <li ng-class="{'active' : App.UI.Navbar.getActiveNav('packages')}">
+                    <a href="<?php echo site_url('admin/packages'); ?>">
+                        <i class="fa fa-fw fa-archive"></i> Packages
                     </a>
                 </li>
             </ul>
@@ -41,7 +41,7 @@
             </form>
             <?php if ($this->resources->data['user']->role_id == USER_ROLE_ADMIN): ?>
             <ul class="nav navbar-nav navbar-right">
-                <li ng-class="{'active' : App.UI.getActiveNav('users')}"><a href="<?php echo site_url('admin/users'); ?>">
+                <li ng-class="{'active' : App.UI.Navbar.getActiveNav('users')}"><a href="<?php echo site_url('admin/users'); ?>">
                         <i class="fa fa-user-circle"></i> Users</a></li>
 
             </ul>

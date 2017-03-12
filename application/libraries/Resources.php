@@ -44,7 +44,9 @@ class Resources {
         }
         else if ($section == 'CMS') {
             $this->add_css('assets/css/cms.css');
+            $this->js[] = 'assets/libs/bootstrap.min.js';
             $this->js[] = 'assets/js/cms-controllers.js';
+            $this->js[] = 'assets/js/cms.jquery.js';
         }
         $this->js = array_merge($this->js, $this->append_js);
     }
