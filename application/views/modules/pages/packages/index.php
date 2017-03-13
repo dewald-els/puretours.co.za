@@ -1,6 +1,5 @@
 <div id="packages-page">
 
-
     <?php $this->load->view('modules/package-filter/index'); ?>
 
 
@@ -16,7 +15,14 @@
     </div>
 
 
-    <?php $this->load->view('modules/pager/index'); ?>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <?php $this->load->view('modules/pager/index'); ?>
+            </div>
+        </div>
+    </div>
+
 
 
 </div>

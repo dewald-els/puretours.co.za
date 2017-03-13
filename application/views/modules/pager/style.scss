@@ -1,11 +1,11 @@
 .pager {
 
-  .container .row {
+  .container .row .col-xs-1,
+  .container .row .col-xs-10 {
     background: #333333;
     line-height: 48px;
     text-align: center;
   }
-
 
   .pt-btn {
     width: 100%;

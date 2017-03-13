@@ -4,14 +4,12 @@
 
         <div class="row">
 
-            <div class="col-xs-1">
+            <div class="col-xs-2">
                 <button class="pt-btn back"><i class="fa fa-angle-left"></i> Back</button>
             </div>
 
-            <div class="col-xs-10">
+            <div class="col-xs-7">
                 <div class="pager-content">
-
-
 
                     <div class="summary">Page 1 of 6</div>
 
@@ -24,12 +22,10 @@
                         <li class="page">6</li>
                     </ul>
 
-
-
                 </div>
             </div>
 
-            <div class="col-xs-1">
+            <div class="col-xs-2">
                 <button class="pt-btn next">Next <i class="fa fa-angle-right"></i></button>
             </div>
 

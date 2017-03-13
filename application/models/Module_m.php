@@ -3,8 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 require_once APPPATH.'classes/oModule.php';
 
-use PT_Classes;
-
 /**
  * Class Module_m
  */
