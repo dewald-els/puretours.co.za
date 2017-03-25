@@ -13,8 +13,8 @@
 
         <ul>
             <?php $i = 1;
-            foreach ($packageGallery as $slide): ?>
-                <li class="slide" style='background: transparent url("<?php echo base_url($slide->src); ?>")'>
+            foreach (explode(',' , $packageGallery) as $slide): ?>
+                <li class="slide" style='background: transparent url("<?php echo base_url($slide); ?>")'>
 
 
 

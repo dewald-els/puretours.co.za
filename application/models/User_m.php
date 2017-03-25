@@ -27,7 +27,6 @@ class User_m extends MY_Model
 
     public function logged_in()
     {
-        $this->load->library('session');
         return $this->session->userdata('user');
     }
 

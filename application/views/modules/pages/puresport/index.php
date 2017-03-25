@@ -8,22 +8,22 @@
 
                 <div class="col-xs-12 col-md-3 text-center">
                     <div class="tile">
-                        <img src="<?php echo base_url('assets/img/backgrounds/modules/puresport/sport-holidays/1.jpg'); ?>" alt="">
+                        <img src="<?php echo base_url('assets/img/modules/puresport/sport-holidays/1.jpg'); ?>" alt="">
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-3 text-center">
                     <div class="tile">
-                        <img src="<?php echo base_url('assets/img/backgrounds/modules/puresport/sport-holidays/2.jpg'); ?>" alt="">
+                        <img src="<?php echo base_url('assets/img/modules/puresport/sport-holidays/2.jpg'); ?>" alt="">
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-3 text-center">
                     <div class="tile">
-                        <img src="<?php echo base_url('assets/img/backgrounds/modules/puresport/sport-holidays/3.jpg'); ?>" alt="">
+                        <img src="<?php echo base_url('assets/img/modules/puresport/sport-holidays/3.jpg'); ?>" alt="">
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-3 text-center">
                     <div class="tile">
-                        <img src="<?php echo base_url('assets/img/backgrounds/modules/puresport/sport-holidays/4.jpg'); ?>" alt="">
+                        <img src="<?php echo base_url('assets/img/modules/puresport/sport-holidays/4.jpg'); ?>" alt="">
                     </div>
                 </div>
 
@@ -39,7 +39,7 @@
                 <div class="col-xs-12 col-md-8">
 
                     <div class="text-right">
-                        <img class="build-text-arrow" src="<?php echo base_url('assets/img/backgrounds/modules/contact/build-text-arrow.png'); ?>"
+                        <img class="build-text-arrow" src="<?php echo base_url('assets/img/modules/contact/build-text-arrow.png'); ?>"
                              alt="">
                     </div>
 
@@ -89,7 +89,7 @@
                 </div>
                 <div class="col-xs-12 col-md-4 text-center">
 
-                    <img src="<?php echo base_url('assets/img/backgrounds/modules/pureskiing/brochure-download.jpg'); ?>" alt="">
+                    <img src="<?php echo base_url('assets/img/modules/pureskiing/brochure-download.jpg'); ?>" alt="">
 
                     <button class="pt-btn">Download brochure <i class="fa fa-angle-right"></i></button>
 
@@ -99,7 +99,7 @@
 
                     <br>
                     <div class="exchange-rate">
-                        <img src="<?php echo base_url('assets/img/backgrounds/modules/puresport/ex-rate-sample.jpg'); ?>" alt="">
+                        <img src="<?php echo base_url('assets/img/modules/puresport/ex-rate-sample.jpg'); ?>" alt="">
                     </div>
 
 

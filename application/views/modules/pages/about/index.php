@@ -1,7 +1,6 @@
 <div id="about" ng-controller="AboutCtrl">
 
     <div class="intro-tabs">
-
         <div class="intro-tabs-titles">
 
             <div class="container">
@@ -216,7 +215,7 @@
 
                         <div class="tile">
                             <a href="#about">
-                                <img src="<?php echo base_url('assets/img/backgrounds/modules/about/tiles/' . $i . '.jpg'); ?>"
+                                <img src="<?php echo base_url('assets/img/modules/about/tiles/' . $i . '.jpg'); ?>"
                                      alt="">
                             </a>
                         </div>
@@ -241,7 +240,7 @@
                 <div class="col-xs-12 col-md-6">
                     <div class="all-inclusive type">
                         <div class="text-center">
-                            <img src="<?php echo base_url('assets/img/backgrounds/modules/about/types/all-inclusive.png'); ?>"
+                            <img src="<?php echo base_url('assets/img/modules/about/types/all-inclusive.png'); ?>"
                                  alt="All inclusive">
                         </div>
 
@@ -256,7 +255,7 @@
                     <div class="full-board type">
 
                         <div class="text-center">
-                            <img src="<?php echo base_url('assets/img/backgrounds/modules/about/types/full-board.png'); ?>"
+                            <img src="<?php echo base_url('assets/img/modules/about/types/full-board.png'); ?>"
                                  alt="All inclusive">
                         </div>
 
@@ -281,7 +280,7 @@
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eleifend magna et quam suscipit commodo. Duis nunc mauris, consequat id tincidunt vel, condimentum vulputate purus. Phasellus mollis non eros vel hendrerit. Nam tristique pellentesque ante, porta dictum tortor. Etiam volutpat metus sed lacus rhoncus, sodales aliquet lacus maximus.
                             </p>
                         </div>
-                        <div class="right" style="background: #000 url('<?php echo base_url('assets/img/backgrounds/modules/about/types/hosted.jpg'); ?>') top left no-repeat">
+                        <div class="right" style="background: #000 url('<?php echo base_url('assets/img/modules/about/types/hosted.jpg'); ?>') top left no-repeat">
                         </div>
                         <div class="clearfix"></div>
                     </div>

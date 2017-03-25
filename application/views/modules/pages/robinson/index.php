@@ -7,16 +7,16 @@
             <div class="row">
 
                 <div class="col-xs-12 col-md-3 text-center">
-                    <img src="<?php echo base_url('assets/img/backgrounds/modules/robinson/holiday-tiles/1.jpg'); ?>" alt="">
+                    <img src="<?php echo base_url('assets/img/modules/robinson/holiday-tiles/1.jpg'); ?>" alt="">
                 </div>
                 <div class="col-xs-12 col-md-3 text-center">
-                    <img src="<?php echo base_url('assets/img/backgrounds/modules/robinson/holiday-tiles/2.jpg'); ?>" alt="">
+                    <img src="<?php echo base_url('assets/img/modules/robinson/holiday-tiles/2.jpg'); ?>" alt="">
                 </div>
                 <div class="col-xs-12 col-md-3 text-center">
-                    <img src="<?php echo base_url('assets/img/backgrounds/modules/robinson/holiday-tiles/3.jpg'); ?>" alt="">
+                    <img src="<?php echo base_url('assets/img/modules/robinson/holiday-tiles/3.jpg'); ?>" alt="">
                 </div>
                 <div class="col-xs-12 col-md-3 text-center">
-                    <img src="<?php echo base_url('assets/img/backgrounds/modules/robinson/holiday-tiles/4.jpg'); ?>" alt="">
+                    <img src="<?php echo base_url('assets/img/modules/robinson/holiday-tiles/4.jpg'); ?>" alt="">
                 </div>
 
             </div>
@@ -31,7 +31,7 @@
                 <div class="col-xs-8">
 
                     <div class="text-right">
-                        <img class="build-text-arrow" src="<?php echo base_url('assets/img/backgrounds/modules/contact/build-text-arrow.png'); ?>"
+                        <img class="build-text-arrow" src="<?php echo base_url('assets/img/modules/contact/build-text-arrow.png'); ?>"
                              alt="">
                     </div>
 
@@ -83,7 +83,7 @@
                 </div>
                 <div class="col-xs-12 col-md-4 text-center">
 
-                    <img src="<?php echo base_url('assets/img/backgrounds/modules/robinson/robinson-brochure.jpg'); ?>" alt="">
+                    <img src="<?php echo base_url('assets/img/modules/robinson/robinson-brochure.jpg'); ?>" alt="">
 
                     <button class="pt-btn">Download brochure <i class="fa fa-angle-right"></i></button>
 

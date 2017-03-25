@@ -17,7 +17,6 @@ namespace PT_Classes {
         public $id;
         public $title;
         public $slug;
-        public $modules;
         public $keywords;
         public $description;
         public $show_header = 1;
@@ -28,21 +27,9 @@ namespace PT_Classes {
             if (count($page_info)) {
                 $this->id = $page_info[0]->page_id;
                 $this->title = $page_info[0]->page_title;
-                $this->keywords = $page_info[0]->keywords;
-                $this->description = $page_info[0]->description;
+                $this->keywords = isset($page_info[0]->keywords) ? $page_info[0]->keywords : '';
+                $this->description = isset($page_info[0]->description) ? $page_info[0]->description : '';
                 $this->slug = $page_info[0]->slug;
-                $this->set_modules($page_info);
-            }
-        }
-
-        /**
-         * Create a new Module object for each page module.
-         * @param $modules
-         */
-        public function set_modules($modules)
-        {
-            foreach ($modules as $module) {
-                $this->modules[$module->alias] = new oModule($module);
             }
         }
     }

@@ -31,17 +31,8 @@
 
   .top {
     a[role=button] {
-      background: transparent url("../img/buttons/button-generic.png") top left no-repeat;
       display: inline-block;
-      width: 200px;
-      height: 48px;
-      line-height: 48px;
-      color: #FFF;
-      text-decoration: none;
-      padding-left: 20px;
-      &:hover {
-        background-position: bottom left !important;
-      }
+      width: 275px;
     }
   }
 }

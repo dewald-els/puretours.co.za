@@ -44,10 +44,10 @@
                 </div>
                 <div class="col-xs-6 text-center">
                     <ul class="footer-nav">
-                        <li><h4>HOME</h4></li>
-                        <li><h4>PURE <span class="text-bold">SKIING</span></h4></li>
-                        <li><h4>PURE <span class="text-bold">SPORT</span></h4></li>
-                        <li><h4><span class="text-bold">ROBINSON</span> CLUB</h4></li>
+                        <li><a href="<?php echo site_url('home'); ?>"><h4>HOME</h4></a></li>
+                        <li><a href="<?php echo site_url('pure-skiing'); ?>"><h4>PURE <span class="text-bold">SKIING</span></h4></a></li>
+                        <li><a href="<?php echo site_url('pure-sport'); ?>"><h4>PURE <span class="text-bold">SPORT</span></h4></a></li>
+                        <li><a href="<?php echo site_url('robinson-club'); ?>"><h4><span class="text-bold">ROBINSON</span> CLUB</h4></a></li>
                     </ul>
 
                     <div class="copy">

@@ -24,7 +24,7 @@
             <div class="col-xs-12 col-md-6 col-lg-3 match-height match-height-lg">
 
                 <div class="package-img">
-                    <img class="img-responsive" src="<?php echo base_url('assets/img/backgrounds/modules/packages/1/thumbnail.jpg'); ?>" alt="">
+                    <img class="img-responsive" src="<?php echo base_url('assets/img/modules/packages/1/thumbnail.jpg'); ?>" alt="">
                 </div>
 
             </div>

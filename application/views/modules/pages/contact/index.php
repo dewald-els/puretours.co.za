@@ -106,7 +106,7 @@
                 <div class="col-xs-8">
 
                     <div class="text-right">
-                        <img class="build-text-arrow" src="<?php echo base_url('assets/img/backgrounds/modules/contact/build-text-arrow.png'); ?>"
+                        <img class="build-text-arrow" src="<?php echo base_url('assets/img/modules/contact/build-text-arrow.png'); ?>"
                              alt="">
                     </div>
 

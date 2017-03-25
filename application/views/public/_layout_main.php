@@ -10,39 +10,29 @@
 
     <title>Pure Tours - <?php echo $this->resources->data['page']->title; ?></title>
     <?php foreach ($this->resources->css as $css): ?>
-        <link rel="stylesheet" href="<?php echo base_url($css) ?>" />
-    <?php endforeach; ?>
-
-    <?php foreach ($this->resources->data['page']->modules as $module): ?>
-        <?php if (isset($module->plugins) && isset($module->plugins->css)): ?>
-            <?php foreach ($module->plugins->css as $css): ?>
-                <link href="<?php echo base_url($css); ?>" rel="stylesheet" type="text/css" />
-            <?php endforeach; ?>
-        <?php endif; ?>
+        <link rel="stylesheet" href="<?php echo base_url($css) ?>"/>
     <?php endforeach; ?>
 </head>
 <body ng-controller="AppCtrl" ng-cloak>
 
-    <main ng-controller="PageCtrl">
-        <?php $this->load->view('public/_page_template'); ?>
-    </main>
+<main ng-controller="PageCtrl">
 
-    <?php foreach ($this->resources->js as $js): ?>
-        <script type="text/javascript" src="<?php echo base_url($js) ?>"></script>
+    <input type="hidden" id="base-url" value="<?php echo base_url(); ?>" />
+
+    <?php foreach ($this->resources->views as $view): ?>
+        <?php $this->load->view($view); ?>
     <?php endforeach; ?>
 
-    <?php foreach ($this->resources->data['page']->modules as $module): ?>
-        <?php if (isset($module->plugins) && isset($module->plugins->js)): ?>
-            <?php foreach ($module->plugins->js as $js): ?>
-                <?php if (strpos($js,'http') !== false): ?>
-                    <script type="text/javascript" async defer src="<?php echo $js; ?>"></script>
-                <?php else: ?>
-                    <script type="text/javascript" src="<?php echo base_url($js); ?>"></script>
-                <?php endif; ?>
+</main>
 
-            <?php endforeach; ?>
-        <?php endif; ?>
-    <?php endforeach; ?>
+<?php foreach ($this->resources->js as $js): ?>
+    <?php if (strpos($js, 'http') !== false): ?>
+        <script type="text/javascript" async defer src="<?php echo $js; ?>"></script>
+    <?php else: ?>
+        <script type="text/javascript" src="<?php echo base_url($js); ?>"></script>
+    <?php endif; ?>
+<?php endforeach; ?>
+
 
 </body>
 </html>

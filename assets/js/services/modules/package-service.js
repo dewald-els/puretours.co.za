@@ -6,7 +6,7 @@ APP.factory('PackageService', ['$http', function ($http) {
     return {
 
         getInfo: function (packageId) {
-            return $http.post('/cms/package/get_info',{
+            return $http.post(baseUrl + '/cms/package/get_info',{
                 packageId: packageId
             })
         }

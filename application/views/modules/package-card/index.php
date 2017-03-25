@@ -7,7 +7,7 @@
 
         <div class="left">
             <div class="package-img">
-                <img src="<?php echo base_url('assets/img/backgrounds/modules/package-builder/demo-thumb.jpg'); ?>" alt="" width="200">
+                <img src="<?php echo base_url('assets/img/modules/package-builder/demo-thumb.jpg'); ?>" alt="" width="200">
                 <button class="pt-btn">View package <i class="fa fa-angle-right"></i></button>
             </div>
         </div>

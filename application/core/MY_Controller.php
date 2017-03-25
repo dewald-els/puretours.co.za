@@ -26,19 +26,19 @@ class MY_Controller extends CI_Controller
         $this->load->library('responder');
     }
 
-    protected function get_page_content() 
+
+    protected function get_page_content()
     {
         $url = $this->uri->segment(1);
         $url = $url == NULL ? 'home' : $url;
         $this->load->model('page_m');
         $page = $this->page_m->get_page_content($url);
         $this->resources->add_data('page', $page);
-        $this->resources->header = $page->show_header;
-        $this->resources->footer = $page->show_footer;
     }
 
     public function layout_public() 
     {
+        $this->get_page_content();
         $this->resources->load_defaults();
         $this->load->view('public/_layout_main');
     }

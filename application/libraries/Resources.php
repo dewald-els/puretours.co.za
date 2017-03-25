@@ -32,10 +32,18 @@ class Resources {
         }
         $this->css[] = 'assets/css/font-awesome.min.css';
         $this->css[] = 'assets/css/global.css';
+        $this->css[] = 'assets/plugins/angular-date-picker/bootstrap-daterangepicker/daterangepicker.css';
+
+
         $this->js[] = 'assets/libs/jquery.min.js';
         $this->js[] = 'assets/libs/moment.min.js';
+        $this->js[] = 'assets/libs/bootstrap.min.js';
         $this->js[] = 'assets/libs/angular.min.js';
         $this->js[] = 'assets/libs/angular-animate.min.js';
+
+        $this->js[] = 'assets/plugins/angular-date-picker/bootstrap-daterangepicker/daterangepicker.js';
+        $this->js[] = 'assets/plugins/angular-date-picker/angular-daterangepicker/angular-daterangepicker.js';
+
         $this->js[] = 'assets/js/app.js';
         $this->js[] = 'assets/js/services.js';
 
@@ -44,7 +52,7 @@ class Resources {
         }
         else if ($section == 'CMS') {
             $this->add_css('assets/css/cms.css');
-            $this->js[] = 'assets/libs/bootstrap.min.js';
+
             $this->js[] = 'assets/js/cms-controllers.js';
             $this->js[] = 'assets/js/cms.jquery.js';
         }

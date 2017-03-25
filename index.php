@@ -36,6 +36,7 @@
  * @filesource
  */
 
+setlocale(LC_MONETARY, 'en_ZA');
 /*
  *---------------------------------------------------------------
  * APPLICATION ENVIRONMENT
@@ -56,7 +57,6 @@
 define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
 //define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'staging');
 //define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'production');
-
 /*
  *---------------------------------------------------------------
  * ERROR REPORTING
