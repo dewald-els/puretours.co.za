@@ -8,7 +8,7 @@
         </div>
     </div>
 
-    <div class="slider">
+    <div class="top-5-location-slider">
         <ul>
             <?php $i = 1; foreach ($slides as $slide): ?>
                 <li class="slide" style='background: transparent url("<?php echo $slide['src']; ?>")'>

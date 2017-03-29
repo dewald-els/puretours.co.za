@@ -15,6 +15,7 @@
 </head>
 <body ng-controller="AppCtrl" ng-cloak>
 
+
 <main ng-controller="PageCtrl">
 
     <input type="hidden" id="base-url" value="<?php echo base_url(); ?>" />

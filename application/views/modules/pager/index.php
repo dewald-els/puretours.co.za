@@ -5,17 +5,11 @@
 
     <div class="pager-content">
 
-        <div class="summary">Page 1 of 6</div>
+        <div class="summary">Page <?php echo $this->resources->data['current_page']; ?> of <?php echo $this->resources->data['num_of_pages']; ?></div>
 
-        <ul class="pages">
-            <li class="page active">1</li>
-            <li class="page">2</li>
-            <li class="page">3</li>
-            <li class="page">4</li>
-            <li class="page">5</li>
-            <li class="page">6</li>
-        </ul>
-
+        <div class="pages">
+            <?php echo $this->resources->data['pagination_links']; ?>
+        </div>
     </div>
 
 

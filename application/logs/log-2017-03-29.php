@@ -1,0 +1,32 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+ERROR - 2017-03-29 18:02:25 --> 404 Page Not Found: Assets/img
+ERROR - 2017-03-29 18:02:25 --> 404 Page Not Found: Assets/img
+ERROR - 2017-03-29 18:02:51 --> 404 Page Not Found: Assets/img
+ERROR - 2017-03-29 18:02:51 --> 404 Page Not Found: Assets/img
+ERROR - 2017-03-29 18:03:23 --> 404 Page Not Found: Assets/img
+ERROR - 2017-03-29 18:03:23 --> 404 Page Not Found: Assets/img
+ERROR - 2017-03-29 18:04:03 --> 404 Page Not Found: Assets/img
+ERROR - 2017-03-29 18:04:03 --> 404 Page Not Found: Assets/img
+ERROR - 2017-03-29 18:04:23 --> 404 Page Not Found: Assets/img
+ERROR - 2017-03-29 18:04:23 --> 404 Page Not Found: Assets/img
+ERROR - 2017-03-29 18:08:59 --> 404 Page Not Found: Assets/img
+ERROR - 2017-03-29 18:08:59 --> 404 Page Not Found: Assets/img
+ERROR - 2017-03-29 18:09:00 --> 404 Page Not Found: Assets/img
+ERROR - 2017-03-29 18:09:00 --> 404 Page Not Found: Assets/img
+ERROR - 2017-03-29 18:09:02 --> 404 Page Not Found: Assets/img
+ERROR - 2017-03-29 18:09:02 --> 404 Page Not Found: Assets/img
+ERROR - 2017-03-29 18:09:26 --> 404 Page Not Found: Assets/img
+ERROR - 2017-03-29 18:09:26 --> 404 Page Not Found: Assets/img
+ERROR - 2017-03-29 18:09:27 --> 404 Page Not Found: Assets/img
+ERROR - 2017-03-29 18:09:27 --> 404 Page Not Found: Assets/img
+ERROR - 2017-03-29 18:09:33 --> 404 Page Not Found: Assets/img
+ERROR - 2017-03-29 18:09:33 --> 404 Page Not Found: Assets/img
+ERROR - 2017-03-29 18:10:30 --> 404 Page Not Found: Assets/img
+ERROR - 2017-03-29 18:10:30 --> 404 Page Not Found: Assets/img
+ERROR - 2017-03-29 18:10:34 --> 404 Page Not Found: Assets/img
+ERROR - 2017-03-29 18:10:34 --> 404 Page Not Found: Assets/img
+ERROR - 2017-03-29 18:10:34 --> 404 Page Not Found: Assets/img
+ERROR - 2017-03-29 18:10:34 --> 404 Page Not Found: Assets/img
+ERROR - 2017-03-29 18:10:41 --> 404 Page Not Found: Assets/img
+ERROR - 2017-03-29 18:10:41 --> 404 Page Not Found: Assets/img

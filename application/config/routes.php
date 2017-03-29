@@ -50,48 +50,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 
-function public_route($_route) { return 'public/' . $_route; }
-function cms_route($_route) { return 'cms/' . $_route; }
-
-/**---------------------------------------------------
- * CMS ROUTES
- * ------------------------------------------------------*/
-$route['admin'] = cms_route('dashboard');
-$route['admin/dashboard'] = cms_route('dashboard');
-$route['admin/pages'] = cms_route('pages/index');
-// USERS
-$route['admin/login'] = cms_route('login/index');
-$route['admin/login-user'] = cms_route('login/login');
-$route['admin/logout'] = cms_route('login/logout');
-$route['admin/users'] = cms_route('users/index');
-$route['admin/users/get_users'] = cms_route('users/get_users');
-$route['admin/users/(:num)'] = cms_route('users/edit_user/$1');
-// PAGES
-$route['admin/pages/get_pages'] = cms_route('pages/get_pages');
-$route['admin/pages/get-page-modules'] = cms_route('pages/get_page_modules');
-$route['admin/pages/(:num)'] = cms_route('pages/edit_page/$1');
-// MODULES
-$route['admin/pages/module/(:num)/(:num)'] = cms_route('module/index/$1/$2');
-// Packages
-$route['admin/packages'] = cms_route('packages/index');
-
-
 /**---------------------------------------------------
  * PUBLIC ROUTES
  * ------------------------------------------------------*/
-$route['home'] = public_route('home/index');
-$route['about'] = public_route('about/index');
-$route['contact'] = public_route('contact/index');
-$route['package/(:num)/(:any)'] = public_route('package/index/$1/$2');
-$route['packages'] = public_route('packages/index');
-$route['pure-skiing'] = public_route('pureski/index');
-$route['pure-sport'] = public_route('puresport/index');
-$route['resort/(:num)/(:any)'] = public_route('resort/index/$1/$2');
-$route['robinson-club'] = public_route('robinson/index');
+$route['home'] = 'home/index';
+$route['about'] = 'about/index';
+$route['contact'] = 'contact/index';
+$route['package/(:num)/(:any)'] = 'package/index/$1/$2';
+$route['sport-packages'] = 'sport_packages/index';
+$route['sport-packages/(:num)'] = 'sport_packages/index/$1';
+$route['ski-packages'] = 'ski_packages/index';
+$route['ski-packages/(:num)'] = 'ski_packages/index/$1';
+$route['pure-skiing'] = 'pureski/index';
+$route['pure-sport'] = 'puresport/index';
+$route['resort/(:num)/(:any)'] = 'resort/index/$1/$2';
+$route['robinson-club'] = 'robinson/index';
 
 /**---------------------------------------------------
  * DEFAULTS
  * ------------------------------------------------------*/
-$route['default_controller'] = public_route('home');
+$route['default_controller'] = 'home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

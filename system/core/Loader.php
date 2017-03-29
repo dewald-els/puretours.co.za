@@ -1320,9 +1320,9 @@ class CI_Loader {
 		}
 
 		// Autoload packages
-		if (isset($autoload['packages']))
+		if (isset($autoload['SportPackages']))
 		{
-			foreach ($autoload['packages'] as $package_path)
+			foreach ($autoload['SportPackages'] as $package_path)
 			{
 				$this->add_package_path($package_path);
 			}

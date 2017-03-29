@@ -35,7 +35,6 @@
     padding-left: 25px;
     text-transform: uppercase;
   }
-
   .package-tags {
 
   }
@@ -45,6 +44,17 @@
       padding-left: 25px;
     }
   }
+
+  @media screen and (max-width: 480px) {
+    .package-title {
+      padding-left: 0;
+    }
+    .package-tags {
+      padding-left: 0;
+    }
+  }
+
+
 
   .package-img {
 

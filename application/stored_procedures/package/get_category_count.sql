@@ -1,0 +1,1 @@
+SELECT COUNT(package_id) AS package_count FROM package WHERE active = 1 and package_category_id = '{$category_id}';

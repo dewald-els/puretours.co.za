@@ -33,6 +33,7 @@ namespace PT_Classes
         public $duration;
         public $included;
         public $excluded;
+        public $url_friendly_name;
 
         public function __construct($package = NULL)
         {
@@ -56,8 +57,9 @@ namespace PT_Classes
                 $this->included  = $package->included;
                 $this->gallery  = $package->gallery;
                 $this->banner = $package->banner;
+                $this->url_friendly_name = str_replace(' ', '-', $this->package_name);
+                $this->url_friendly_name = str_replace("'", "", $this->url_friendly_name);
             }
         }
-
     }
 }

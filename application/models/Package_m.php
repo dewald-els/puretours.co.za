@@ -30,4 +30,26 @@ class Package_m extends MY_Model
         $this->package = new \PT_Classes\oPackage($result->row());
         return $this->package;
     }
+
+    public function get_category_packages($category_id, $start = 0, $end = 10)
+    {
+        $query = $this->get_query_from_file('package', 'get_category_packages.sql');
+        $query = str_replace('{$category_id}', $category_id, $query);
+        $query = str_replace('{$start}', $start, $query);
+        $query = str_replace('{$end}', $end, $query);
+        $result = $this->db->query($query);
+        $packages = array();
+        foreach ($result->result() as $package) {
+            $packages[] = new \PT_Classes\oPackage($package);
+        }
+        return $packages;
+    }
+
+    public function count_category_packages($category_id) {
+        $query = $this->get_query_from_file('package', 'get_category_count.sql');
+        $query = str_replace('{$category_id}', $category_id, $query);
+        $result = $this->db->query($query);
+        $count = $result->row();
+        return is_null($count->package_count) ? 0 : $count->package_count;
+    }
 }

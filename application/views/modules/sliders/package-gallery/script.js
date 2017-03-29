@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    $('.slider').unslider({
+    $('.package-gallery-slider').unslider({
         autoplay: true,
         delay: 3000,
         speed: 1000,

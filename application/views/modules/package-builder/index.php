@@ -5,6 +5,7 @@
         <img src="<?php echo base_url('assets/img/modules/contact/builder-logo.jpg'); ?>"
              alt="">
 
+
         <h4>Build your own escape and we’ll make it happen!</h4>
 
         <div class="trip-form" ng-class="{'hidden': PackageBuilder.currentForm != 'trip-form'}">

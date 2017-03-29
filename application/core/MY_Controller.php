@@ -17,7 +17,6 @@
  */
 class MY_Controller extends CI_Controller
 {
-    private $ignore_urls = ['admin/login', 'admin/login-user'];
 
     public function __construct()
     {
@@ -26,6 +25,9 @@ class MY_Controller extends CI_Controller
         $this->load->library('responder');
     }
 
+    /**-----------------------------------------------------------------------------------------------------------------
+     * PUBLIC
+    ------------------------------------------------------------------------------------------------------------------*/
 
     protected function get_page_content()
     {
@@ -43,24 +45,6 @@ class MY_Controller extends CI_Controller
         $this->load->view('public/_layout_main');
     }
 
-    public function layout_cms($page_title = '', $layout = 'cms/_layout_main')
-    {
-        $this->verify_login();
-        $this->resources->page_title = $page_title;
-        $this->resources->load_defaults('CMS');
-        $this->load->view($layout);
-    }
-
-    protected function verify_login()
-    {
-        $this->load->model('user_m');
-        $user = $this->user_m->logged_in();
-        $this->resources->add_data('user', $user);
-        if ($user == false && !in_array($this->uri->uri_string(),$this->ignore_urls)) {
-            redirect('admin/login');
-        }
-    }
-
     protected function get_post($from_input = FALSE)
     {
         return ($from_input ? json_decode(file_get_contents("php://input")) : $_POST);
@@ -70,5 +54,16 @@ class MY_Controller extends CI_Controller
         echo '<pre>';
         print_r($data);
         echo '</pre>';
+    }
+
+    /**-----------------------------------------------------------------------------------------------------------------
+     * CMS
+    ------------------------------------------------------------------------------------------------------------------*/
+
+    protected function layout_cms()
+    {
+        $this->resources->load_defaults();
+        $this->resources->add_css('assets/css/global-cms.css');
+        $this->load->view('cms/_layout_main');
     }
 }

@@ -1,6 +1,6 @@
 <div class="package-gallery">
 
-    <div class="slider">
+    <div class="package-gallery-slider">
 
         <div class="arrows">
             <button class="arrow left">&nbsp;</button>

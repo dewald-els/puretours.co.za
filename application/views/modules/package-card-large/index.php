@@ -1,3 +1,4 @@
+<?php /** @var $package \PT_Classes\oPackage */; ?>
 <div class="package-card-lg">
 
     <div class="container-fluid">
@@ -6,7 +7,7 @@
 
             <div class="col-xs-12 col-md-9">
 
-                <h2 class="package-title">Title of package here</h2>
+                <h2 class="package-title"><?php echo $package->package_name; ?></h2>
 
             </div>
 
@@ -32,9 +33,7 @@
             <div class="col-xs-12 col-md-6 col-lg-3 match-height match-height-lg">
 
                 <p class="package-introduction">
-                    Small introduction here lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum mollis enim sed tincidunt.
-                    Curabitur nec ultricies lectus. Nunc eleifend arcu sit amet ultrices auctor. Aenean sapien sapien, placerat eu laoreet a,
-                    fermentum eget arcu.
+                    <?php echo nl2br($package->package_description); ?>
                 </p>
 
             </div>
@@ -43,10 +42,13 @@
 
                 <div class="package-detail">
                     <ul>
-                        <li><b>Valid:</b> <span class="valid-dates">25 March - 1 Apr 2017</span></li>
-                        <li><b>Duration: </b> <span class="duration">7 Nights</span></li>
-                        <li><b>Includes:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
-                        <li><b>Excludes:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                        <li><b>Valid:</b> <span class="valid-dates">
+                                <?php echo date('d M', strtotime($package->date_available)); ?> -
+                                <?php echo date('d M Y', strtotime($package->date_end)); ?></span>
+                        </li>
+                        <li><b>Duration: </b> <span class="duration"><?php echo $package->duration; ?> Nights</span></li>
+                        <li><b>Includes:</b> <?php echo $package->included; ?></li>
+                        <li><b>Excludes:</b> <?php echo $package->excluded; ?></li>
                     </ul>
                 </div>
 
@@ -59,13 +61,13 @@
 
                     <h2>
                         <span class="from">From only</span>
-                        R <span class="price">31 995</span>
+                        R <span class="price"><?php echo number_format($package->base_price,0,'.',' '); ?></span>
                         <small>Per person including taxes</small>
                     </h2>
 
 
 
-                    <button class="pt-btn">View package</button>
+                    <a role="button" href="<?php echo site_url('package/'.$package->package_id.'/'.$package->url_friendly_name); ?>" class="pt-btn">View package</a>
                 </div>
 
             </div>

@@ -6,7 +6,8 @@
  * Time: 10:09 AM
  */
 
-date_default_timezone_set('Africa/Johannesburg');
+//date_default_timezone_set('Africa/Johannesburg');
+
 
 $allowed_domains = array('localhost', 'demos.sumodevelopment.co.za');
 if (in_array($_SERVER['HTTP_HOST'], $allowed_domains)) {

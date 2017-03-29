@@ -107,7 +107,10 @@
   background: #f4f4f4;
   border: thin solid #dbdbdb;
 }
-input[type=text].form-control {
+input[type=text].form-control,
+input[type=tel].form-control,
+input[type=email].form-control,
+input[type=password].form-control{
   height: 48px;
 }
 .pt-btn {

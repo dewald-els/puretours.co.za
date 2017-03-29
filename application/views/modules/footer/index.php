@@ -17,9 +17,13 @@
                 <div class="col-xs-12 col-md-8">
                     <div class="footer-right">
                         <form action="">
-                            <input type="text" placeholder="NAME & SURNAME">
-                            <input type="text" placeholder="EMAIL ADDRESS">
-                            <button>&nbsp;</button>
+                            <input id="footer-name" type="text" placeholder="NAME & SURNAME">
+                            <input id="footer-email-address" type="text" placeholder="EMAIL ADDRESS">
+                            <button id="footer-btn-signup">
+                                &nbsp;
+                                <i class="fa fa-refresh fa-spin"></i>
+                                <i class="fa fa-check-circle"></i>
+                            </button>
                         </form>
                     </div>
 

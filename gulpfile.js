@@ -1,147 +1,114 @@
-var ENV = 'dev';
-var gulp = require('gulp');
-var imports = require('gulp-imports');
-var uglify = require('gulp-uglify');
-var babel = require('gulp-babel');
-var sass = require('gulp-sass');
-var sequence = require('run-sequence');
+const ENV = 'dev';
+let gulp = require('gulp');
+let imports = require('gulp-imports');
+let uglify = require('gulp-uglify');
+let babel = require('gulp-babel');
+let sass = require('gulp-sass');
+let sequence = require('run-sequence');
 
 
 gulp.task('compile-scss-folder', function () {
     if (ENV == 'dev') {
         return gulp.src('assets/scss/*.scss')
             .pipe(sass())
-            .pipe(gulp.dest('compiled-assets/css'));
+            .pipe(gulp.dest('assets/css'));
     }
     else {
         return gulp.src('assets/scss/*.scss')
             .pipe(sass({outputStyle: 'compressed'}))
-            .pipe(gulp.dest('compiled-assets/css'));
+            .pipe(gulp.dest('assets/css'));
     }
 });
 
 gulp.task('compile-app', function () {
     if (ENV == 'dev') {
-        return gulp.src('assets/js/app.js')
+        return gulp.src('assets/js-src/app.js')
             .pipe(imports())
             .pipe(babel({presets: 'es2015'}))
-            .pipe(gulp.dest('compiled-assets/js'));
+            .pipe(gulp.dest('assets/js'));
     }
     else {
-        return gulp.src('assets/js/app.js')
+        return gulp.src('assets/js-src/app.js')
             .pipe(imports())
             .pipe(babel({presets: 'es2015'}))
             .pipe(uglify())
-            .pipe(gulp.dest('compiled-assets/js'));
-    }
-});
-
-gulp.task('compile-cms-controllers', function () {
-    if (ENV == 'dev') {
-        return gulp.src('assets/js/controllers/cms-controllers.js')
-            .pipe(imports())
-            .pipe(babel({presets: 'es2015'}))
-            .pipe(gulp.dest('compiled-assets/js'));
-    }
-    else {
-        return gulp.src('assets/js/controllers/cms-controllers.js')
-            .pipe(imports())
-            .pipe(babel({presets: 'es2015'}))
-            .pipe(uglify())
-            .pipe(gulp.dest('compiled-assets/js'));
+            .pipe(gulp.dest('assets/js'));
     }
 });
 
 gulp.task('compile-controllers', function () {
     if (ENV == 'dev') {
-        return gulp.src('assets/js/controllers/controllers.js')
+        return gulp.src('assets/js-src/controllers/controllers.js')
             .pipe(imports())
             .pipe(babel({presets: 'es2015'}))
-            .pipe(gulp.dest('compiled-assets/js'));
+            .pipe(gulp.dest('assets/js'));
     }
     else {
-        return gulp.src('assets/js/controllers/controllers.js')
+        return gulp.src('assets/js-src/controllers/controllers.js')
             .pipe(imports())
             .pipe(babel({presets: 'es2015'}))
             .pipe(uglify())
-            .pipe(gulp.dest('compiled-assets/js'));
+            .pipe(gulp.dest('assets/js'));
     }
 });
 
 gulp.task('compile-services', function () {
     if (ENV == 'dev') {
-        return gulp.src('assets/js/services/services.js')
+        return gulp.src('assets/js-src/services/services.js')
             .pipe(imports())
             .pipe(babel({presets: 'es2015'}))
-            .pipe(gulp.dest('compiled-assets/js'));
+            .pipe(gulp.dest('assets/js'));
     }
     else {
-        return gulp.src('assets/js/services/services.js')
+        return gulp.src('assets/js-src/services/services.js')
             .pipe(imports())
             .pipe(babel({presets: 'es2015'}))
             .pipe(uglify())
-            .pipe(gulp.dest('compiled-assets/js'));
+            .pipe(gulp.dest('assets/js'));
     }
 });
 
 gulp.task('compile-jquery', function () {
     if (ENV == 'dev') {
-        return gulp.src('assets/js/jquery-scripts/cms.jquery.js')
+        return gulp.src('assets/js-src/jquery-scripts/pt.jquery.js')
             .pipe(imports())
             .pipe(babel({presets: 'es2015'}))
-            .pipe(gulp.dest('compiled-assets/js'));
+            .pipe(gulp.dest('assets/js'));
     }
     else {
-        return gulp.src('assets/js/jquery-scripts/cms.jquery.js')
+        return gulp.src('assets/js-src/jquery-scripts/pt.jquery.js')
             .pipe(imports())
             .pipe(babel({presets: 'es2015'}))
             .pipe(uglify())
-            .pipe(gulp.dest('compiled-assets/js'));
+            .pipe(gulp.dest('assets/js'));
     }
 });
 
-gulp.task('copy-system-fonts', function () {
-    return gulp.src('assets/fonts/*')
-        .pipe(gulp.dest('compiled-assets/fonts'));
+gulp.task('compile-modules-js', function () {
+    if (ENV == 'dev') {
+        return gulp.src('assets/js-src/modules.js')
+            .pipe(imports())
+            .pipe(babel({presets: 'es2015'}))
+            .pipe(gulp.dest('assets/js'));
+    }
+    else {
+        return gulp.src('assets/js-src/modules.js')
+            .pipe(imports())
+            .pipe(babel({presets: 'es2015'}))
+            .pipe(uglify())
+            .pipe(gulp.dest('assets/js'));
+    }
 });
 
 gulp.task('compile-assets', function () {
     return sequence(
         'compile-scss-folder',
-        'copy-system-fonts',
         'compile-app',
         'compile-controllers',
-        'compile-cms-controllers',
         'compile-services',
-        'compile-jquery'
+        'compile-jquery',
+        'compile-modules-js'
     );
-});
-
-gulp.task('copy-base', function () {
-    return gulp.src(['.htaccess', 'index.php', 'license.txt']).pipe(gulp.dest('dist'));
-});
-
-gulp.task('copy-application', function () {
-    return gulp.src('application/**/*').pipe(gulp.dest('dist/application'));
-});
-
-gulp.task('copy-system', function () {
-    return gulp.src('system/**/*').pipe(gulp.dest('dist/system'));
-});
-
-gulp.task('copy-assets', function () {
-    return gulp.src('compiled-assets/**/*').pipe(gulp.dest('dist/assets'));
-});
-
-gulp.task('copy-css', function () {
-    return gulp.src([
-        'assets/bower-components/font-awesome/css/font-awesome.min.css'
-    ]).pipe(gulp.dest('dist/assets/css/'));
-});
-
-gulp.task('copy-plugins', function () {
-    return gulp.src(['assets/plugins/**/*'])
-        .pipe(gulp.dest('dist/assets/plugins'))
 });
 
 gulp.task('copy-libs', function () {
@@ -151,32 +118,26 @@ gulp.task('copy-libs', function () {
         'assets/bower-components/moment/min/moment.min.js',
         'assets/bower-components/angular/angular.min.js',
         'assets/bower-components/angular-animate/angular-animate.min.js'
-    ]).pipe(gulp.dest('dist/assets/libs/'));
+    ]).pipe(gulp.dest('assets/libs/'));
+});
+
+gulp.task('copy-fa', function () {
+    return gulp.src([
+        'assets/bower-components/font-awesome/css/font-awesome.min.css'
+    ]).pipe(gulp.dest('assets/css'))
 });
 
 gulp.task('copy-fa-fonts', function () {
     return gulp.src([
         'assets/bower-components/font-awesome/fonts/*'
-    ]).pipe(gulp.dest('dist/assets/fonts'))
-});
-
-gulp.task('copy-img', function () {
-    return gulp.src([
-        'assets/img/**/*'
-    ]).pipe(gulp.dest('dist/assets/img'));
+    ]).pipe(gulp.dest('assets/fonts'))
 });
 
 gulp.task('copy', function () {
     return sequence(
-        'copy-base',
-        'copy-application',
-        'copy-system',
-        'copy-assets',
-        'copy-css',
         'copy-libs',
-        'copy-plugins',
-        'copy-fa-fonts',
-        'copy-img'
+        'copy-fa',
+        'copy-fa-fonts'
     );
 });
 
