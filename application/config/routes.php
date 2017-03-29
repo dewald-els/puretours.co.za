@@ -67,6 +67,22 @@ $route['resort/(:num)/(:any)'] = 'resort/index/$1/$2';
 $route['robinson-club'] = 'robinson/index';
 
 /**---------------------------------------------------
+ * CMS Routes
+ * ------------------------------------------------------*/
+$route['admin'] = 'admin_login/index';
+$route['admin/login'] = 'admin_login/login';
+$route['admin/dashboard'] = 'admin_dashboard/index';
+$route['admin/sport-packages'] = 'admin_sport_packages/index';
+$route['admin/sport-packages/(:num)'] = 'admin_sport_packages/index/$1';
+$route['admin/ski-packages'] = 'admin_ski_packages/index';
+$route['admin/ski-packages/(:num)'] = 'admin_ski_packages/index/$1';
+$route['admin/robinson-packages'] = 'admin_robinson_packages/index';
+$route['admin/robinson-packages/(:num)'] = 'admin_robinson_packages/index/$1';
+$route['admin/resorts'] = 'admin_resorts/index';
+$route['admin/countries'] = 'admin_countries/index';
+$route['admin/users'] = 'admin_users/index';
+
+/**---------------------------------------------------
  * DEFAULTS
  * ------------------------------------------------------*/
 $route['default_controller'] = 'home';

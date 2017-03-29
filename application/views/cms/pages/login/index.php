@@ -33,8 +33,16 @@
                 <a href="<?php echo site_url('admin/password-reset'); ?>">Forgot your password?</a>
 
             </div>
-            
 
+            <br>
+
+            <?php if ($this->session->flashdata('login_error')): ?>
+
+                <div class="alert alert-danger">
+                    <p><?php echo $this->session->flashdata('login_error'); ?></p>
+                </div>
+
+            <?php endif; ?>
 
         </div>
 

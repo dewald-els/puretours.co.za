@@ -28,7 +28,15 @@ class Resources
     public function load_defaults($section = 'PUBLIC')
     {
         // Global CSS files
-        $this->css[] = 'assets/css/bootstrap.css';
+        if ($section == 'PUBLIC')
+        {
+            $this->css[] = 'assets/css/bootstrap.css';
+        }
+        else
+        {
+            $this->css[] = 'assets/css/bootstrap-cms.min.css';
+        }
+
         $this->css[] = 'assets/css/font-awesome.min.css';
         $this->css[] = 'assets/plugins/sweetalert/sweetalert.css';
         $this->css[] = 'assets/css/global.css';

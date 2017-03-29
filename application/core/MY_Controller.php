@@ -13,7 +13,10 @@
  * @property Responder $responder
  * @property Page_m $page_m
  * @property User_m $user_m
+ * @property Package_m $package_m
  * @property CI_URI $uri
+ * @property CI_Session $session
+ * @property CI_Encryption $encryption
  */
 class MY_Controller extends CI_Controller
 {
@@ -21,6 +24,7 @@ class MY_Controller extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        $this->load->library('session');
         $this->load->library('resources');
         $this->load->library('responder');
     }
@@ -60,10 +64,20 @@ class MY_Controller extends CI_Controller
      * CMS
     ------------------------------------------------------------------------------------------------------------------*/
 
-    protected function layout_cms()
+    protected function verify_user()
     {
-        $this->resources->load_defaults();
+        if ($this->session->userdata('user') == FALSE) {
+            if ($this->uri->segment(1) == 'admin' && $this->uri->segment(2) !== NULL && $this->uri->segment(2) !== 'login') {
+                redirect(site_url('admin'));
+            }
+        }
+    }
+
+    protected function layout_cms($layout = 'cms/_layout_main')
+    {
+        $this->verify_user();
+        $this->resources->load_defaults('CMS');
         $this->resources->add_css('assets/css/global-cms.css');
-        $this->load->view('cms/_layout_main');
+        $this->load->view($layout);
     }
 }

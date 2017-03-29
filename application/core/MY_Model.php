@@ -1,10 +1,13 @@
-<?php
+<?php defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * Created by PhpStorm.
  * User: dewaldels
  * Date: 2016/07/09
  * Time: 10:32 AM
+ *
+ * Class MY_Model
+ * @property CI_Encryption $encryption
  */
 class MY_Model extends CI_Model
 {

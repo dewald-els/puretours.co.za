@@ -1,8 +1,125 @@
-#login-page {
+$colourSport: #1abc9c;
+$colourSki: #16a085;
+$colourRobinson: #3498db;
+$colourResort: #9b59b6;
+$colourCountries: #e67e22;
+$colourUsers: #d35400;
 
+.text-sport {
+  color: $colourSport
+}
+.text-ski {
+  color: $colourSki;
+}
+.text-robinson {
+  color: $colourRobinson;
+}
+.text-resorts {
+  color: $colourResort;
+}
+.text-countries {
+  color: $colourCountries;
+}
+.text-users {
+  color: $colourUsers;
+}
+
+body {
+  padding-top: 55px;
+  margin-bottom: 35px;
+}
+input.form-control {
+  height: 48px;
+}
+.pagination {
+  margin-top: 0;
+}
+.admin-status-bar {
+  position: fixed;
+  z-index: 10;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #333;
+  height: 30px;
+  color: #fFF;
+  line-height: 30px;
+  font-size: 12px;
+  padding-left: 15px;
+  padding-right: 15px;
+  a {
+    color: #FFF;
+  }
+}
+
+#login-page {
   .login-form {
     padding: 25px;
     margin-top: 55px;
     border: thin solid #efefef;
   }
+}
+
+#dashboard-page
+{
+  a:hover {
+    text-decoration: none;
+  }
+  .dashboard-tile {
+    height: 175px;
+    line-height: 175px;
+    text-align: center;
+    background: #eee;
+    margin-bottom: 30px;
+    font-size: 19px;
+    transition: ease-out 100ms;
+    cursor: pointer;
+    color: #FFF;
+    text-decoration: none;
+  }
+
+  .dashboard-tile:hover
+  {
+    transition: ease-out 100ms;
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
+    -ms-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
+    -o-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
+  }
+
+  .dashboard-tile:active {
+    transition: ease-out 50ms;
+    -webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+    -moz-box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+    -ms-box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+    -o-box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+  }
+
+  .dashboard-tile {
+
+    &.sport{
+      background: $colourSport;
+    }
+    &.ski{
+      background: $colourSki;
+    }
+    &.robinson{
+      background: $colourRobinson;
+    }
+    &.resorts{
+      background: $colourResort;
+    }
+    &.countries{
+      background: $colourCountries;
+    }
+    &.users{
+      background: $colourUsers;
+    }
+  }
+}
+
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+  vertical-align: middle;
 }

@@ -1,4 +1,100 @@
+.text-sport {
+  color: #1abc9c; }
+
+.text-ski {
+  color: #16a085; }
+
+.text-robinson {
+  color: #3498db; }
+
+.text-resorts {
+  color: #9b59b6; }
+
+.text-countries {
+  color: #e67e22; }
+
+.text-users {
+  color: #d35400; }
+
+body {
+  padding-top: 55px;
+  margin-bottom: 35px; }
+
+input.form-control {
+  height: 48px; }
+
+.pagination {
+  margin-top: 0; }
+
+.admin-status-bar {
+  position: fixed;
+  z-index: 10;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #333;
+  height: 30px;
+  color: #fFF;
+  line-height: 30px;
+  font-size: 12px;
+  padding-left: 15px;
+  padding-right: 15px; }
+  .admin-status-bar a {
+    color: #FFF; }
+
 #login-page .login-form {
   padding: 25px;
   margin-top: 55px;
   border: thin solid #efefef; }
+
+#dashboard-page a:hover {
+  text-decoration: none; }
+
+#dashboard-page .dashboard-tile {
+  height: 175px;
+  line-height: 175px;
+  text-align: center;
+  background: #eee;
+  margin-bottom: 30px;
+  font-size: 19px;
+  transition: ease-out 100ms;
+  cursor: pointer;
+  color: #FFF;
+  text-decoration: none; }
+
+#dashboard-page .dashboard-tile:hover {
+  transition: ease-out 100ms;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
+  -ms-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
+  -o-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6); }
+
+#dashboard-page .dashboard-tile:active {
+  transition: ease-out 50ms;
+  -webkit-box-shadow: 0 0px 0px transparent;
+  -moz-box-shadow: 0 0px 0px transparent;
+  -ms-box-shadow: 0 0px 0px transparent;
+  -o-box-shadow: 0 0px 0px transparent;
+  box-shadow: 0 0px 0px transparent; }
+
+#dashboard-page .dashboard-tile.sport {
+  background: #1abc9c; }
+
+#dashboard-page .dashboard-tile.ski {
+  background: #16a085; }
+
+#dashboard-page .dashboard-tile.robinson {
+  background: #3498db; }
+
+#dashboard-page .dashboard-tile.resorts {
+  background: #9b59b6; }
+
+#dashboard-page .dashboard-tile.countries {
+  background: #e67e22; }
+
+#dashboard-page .dashboard-tile.users {
+  background: #d35400; }
+
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+  vertical-align: middle; }

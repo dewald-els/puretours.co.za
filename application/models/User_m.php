@@ -25,15 +25,9 @@ class User_m extends MY_Model
         $this->primary_key = 'user_id';
     }
 
-    public function logged_in()
-    {
-        return $this->session->userdata('user');
-    }
-
     public function get_all()
     {
-        $this->_where(array('active'=>1));
-        return $this->get();
+        return $this->db->get($this->table_name)->result();
     }
 
     public function get_user($user_id)
@@ -41,11 +35,16 @@ class User_m extends MY_Model
         return $this->get($user_id);
     }
 
-
     public function login_user($username)
     {
         $this->_where(array('username'=>$username));
-        $user = $this->get();
-        return $user[0];
+        $user = $this->db->get($this->table_name)->row();
+        return $user;
+    }
+
+    public function match_password($entered_password, $saved_password)
+    {
+        $this->load->library('encryption');
+        return $this->encryption->decrypt($saved_password) == $entered_password;
     }
 }
